@@ -36,7 +36,6 @@ var vm = new Vue({
     mounted: function(){
         // 添加用户浏览历史记录
         this.get_sku_id();
-        // 添加用户浏览历史记录
         if (this.user_id) {
             axios.post(this.host+'/browse_histories/', {
                 sku_id: this.sku_id
@@ -78,23 +77,28 @@ var vm = new Vue({
                 this.sku_count--;
             }
         },
-         // 添加购物车
-        add_cart: function() {
-            axios.post(this.host + '/cart/', {
-                sku_id: parseInt(this.sku_id),
-                count: this.sku_count
-            }, {
-                headers: {
-                    'Authorization': 'JWT ' + this.token
-                },
-                responseType: 'json',
-                withCredentials: true
-            })
+        // 添加购物车
+        add_cart: function(){
+            axios.post(this.host+'/cart/', {
+                    sku_id: parseInt(this.sku_id),
+                    count: this.sku_count
+                }, {
+                    headers: {
+                        'Authorization': 'JWT ' + this.token
+                    },
+                    responseType: 'json',
+                    withCredentials: true
+                })
                 .then(response => {
+                    alert('添加购物车成功');
                     this.cart_total_count += response.data.count;
                 })
                 .catch(error => {
-                    alert(error.response.message[0]);
+                    if ('non_field_errors' in error.response.data) {
+                        alert(error.response.data.non_field_errors[0]);
+                    } else {
+                        alert('添加购物车失败');
+                    }
                     console.log(error.response.data);
                 })
         },
@@ -104,18 +108,7 @@ var vm = new Vue({
         },
         // 获取热销商品数据
         get_hot_goods: function(){
-            axios.get(this.host+'/categories/'+this.cat+'/hotskus/', {
-                    responseType: 'json'
-                })
-                .then(response => {
-                    this.hots = response.data;
-                    for(var i=0; i<this.hots.length; i++){
-                        this.hots[i].url = '/goods/' + this.hots[i].id + '.html';
-                    }
-                })
-                .catch(error => {
-                    console.log(error.response.data);
-                })
+
         },
         // 获取商品评价信息
         get_comments: function(){

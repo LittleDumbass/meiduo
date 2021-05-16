@@ -17,7 +17,7 @@ var vm = new Vue({
     },
     mounted: function(){
         // 获取地址信息
-        axios.get(this.host + '/addresses/', {
+        axios.get(this.host + '/user/addresses/', {
                 headers: {
                     'Authorization': 'JWT ' + this.token
                 },
@@ -73,6 +73,7 @@ var vm = new Vue({
             location.href = '/login.html';
         },
         // 提交订单
+        // 提交订单
         on_order_submit: function(){
             if (this.order_submitting == false){
                 this.order_submitting = true;
@@ -92,7 +93,7 @@ var vm = new Vue({
                     })
                     .catch(error => {
                         this.order_submitting = false;
-                        alert(error.response.data.detail);
+                        alert(error.response.data[0]);
                     })
             }
         }

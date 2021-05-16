@@ -1,17 +1,17 @@
 var vm = new Vue({
     el: '#app',
     data: {
-        host,
+        host: host,
         error_username: false,
         error_pwd: false,
         error_pwd_message: '请填写密码',
         username: '',
         password: '',
-        remember: false
+        remember: true
     },
     methods: {
         // 获取url路径参数
-        get_query_string: function(name){
+        get_query_string: function (name) {
             var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
             var r = window.location.search.substr(1).match(reg);
             if (r != null) {
@@ -20,14 +20,14 @@ var vm = new Vue({
             return null;
         },
         // 检查数据
-        check_username: function(){
+        check_username: function () {
             if (!this.username) {
                 this.error_username = true;
             } else {
                 this.error_username = false;
             }
         },
-        check_pwd: function(){
+        check_pwd: function () {
             if (!this.password) {
                 this.error_pwd_message = '请填写密码';
                 this.error_pwd = true;
@@ -36,18 +36,18 @@ var vm = new Vue({
             }
         },
         // 表单提交
-        on_submit: function(){
+        on_submit: function () {
             this.check_username();
             this.check_pwd();
 
             if (this.error_username == false && this.error_pwd == false) {
-                axios.post(this.host+'/authorizations/', {
-                        username: this.username,
-                        password: this.password
-                    }, {
-                        responseType: 'json',
-                        withCredentials: true
-                    })
+                axios.post(this.host + '/authorizations/', {
+                    username: this.username,
+                    password: this.password
+                }, {
+                    responseType: 'json',
+                    withCredentials: true
+                })
                     .then(response => {
                         // 使用浏览器本地存储保存token
                         if (this.remember) {
@@ -72,22 +72,23 @@ var vm = new Vue({
                         location.href = return_url;
                     })
                     .catch(error => {
-                        this.error_pwd_message = '用户名或密码错误';
+                        if (error.response.status == 400) {
+                            this.error_pwd_message = '用户名或密码错误';
+                        } else {
+                            this.error_pwd_message = '服务器错误';
+                        }
                         this.error_pwd = true;
                     })
             }
         },
-         // qq登录
-        qq_login: function(){
-            var state = this.get_query_string('next') || '/';
-
-
-            axios.get(this.host + '/oauth/qq/authorization/?state=' + state, {
-                    responseType: 'json'
-                })
+        // qq登录
+        qq_login: function () {
+            var next = this.get_query_string('next') || '/';
+            axios.get(this.host + '/oauth/qq/authorization/?next=' + next, {
+                responseType: 'json'
+            })
                 .then(response => {
-                    // 引导用户跳转到qq登录页面
-                    location.href = response.data.oauth_url;
+                    location.href = response.data.login_url;
                 })
                 .catch(error => {
                     console.log(error.response.data);

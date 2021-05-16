@@ -65,7 +65,18 @@ var vm = new Vue({
     mounted: function(){
         this.cat = this.get_query_string('cat');
         this.get_skus();
-
+        axios.get(this.host+'/categories/'+this.cat+'/', {
+                responseType:'json'
+            })
+            .then(response => {
+                this.cat1 = response.data.cat1;
+                this.cat2 = response.data.cat2;
+                this.cat3 = response.data.cat3;
+            })
+            .catch(error => {
+                console.log(error.response.data)
+            });
+        this.get_cart();
         this.get_hot_goods();
     },
     methods: {
@@ -121,22 +132,31 @@ var vm = new Vue({
         },
         // 获取购物车数据
         get_cart: function(){
-
-        },
-        // 获取热销商品数据
-        get_hot_goods: function(){
-            axios.get(this.host+'/categories/'+this.cat+'/hotskus/', {
-                    responseType: 'json'
+            axios.get(this.host+'/cart/', {
+                    headers: {
+                        'Authorization': 'JWT ' + this.token
+                    },
+                    responseType: 'json',
+                    withCredentials: true
                 })
                 .then(response => {
-                    this.hots = response.data;
-                    for(var i=0; i<this.hots.length; i++){
-                        this.hots[i].url = '/goods/' + this.hots[i].id + '.html';
+                    this.cart = response.data;
+                    this.cart_total_count = 0;
+                    for(var i=0;i<this.cart.length;i++){
+                        if (this.cart[i].name.length>25){
+                            this.cart[i].name = this.cart[i].name.substring(0, 25) + '...';
+                        }
+                        this.cart_total_count += this.cart[i].count;
+
                     }
                 })
                 .catch(error => {
                     console.log(error.response.data);
                 })
+        },
+        // 获取热销商品数据
+        get_hot_goods: function(){
+
         }
     }
 });
