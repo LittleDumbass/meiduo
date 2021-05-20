@@ -425,3 +425,1235 @@ INFO 2018-10-26 22:56:14,254 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 1
 INFO 2018-10-26 23:01:40,488 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 214
 INFO 2018-10-26 23:08:16,356 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
 INFO 2018-10-26 23:08:16,637 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 214
+ERROR 2018-10-28 11:27:00,433 exception 135 Internal Server Error: /oauth/qq/authorization/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/views.py", line 14, in get
+    oauth = OAuthQQ(state=state)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/qq_sdk.py", line 20, in __init__
+    self.client_id = client_id or settings.QQ_CLIENT_ID
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/conf/__init__.py", line 57, in __getattr__
+    val = getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'QQ_CLIENT_ID'
+ERROR 2018-10-28 11:27:00,481 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 500 18358
+INFO 2018-10-28 11:28:01,227 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 15:13:17,925 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 15:13:48,674 basehttp 124 "GET /oauth/qq/user/?code=3E1B3207383033C063EAC094449219F8 HTTP/1.1" 200 233
+INFO 2018-10-28 15:13:59,682 basehttp 124 "GET /sms_code/18812345678/ HTTP/1.1" 200 16
+INFO 2018-10-28 15:14:08,353 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+ERROR 2018-10-28 15:14:08,364 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/views.py", line 70, in post
+    if not serializer.is_valid():
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/serializers.py", line 32, in validate
+    if int(sms_code_redis) != int(sms_code_request):
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2018-10-28 15:14:08,424 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 500 18809
+INFO 2018-10-28 15:17:36,944 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 15:18:17,406 basehttp 124 "GET /oauth/qq/user/?code=79BBEF535F9B5A16D806C5086ECB307B HTTP/1.1" 200 233
+INFO 2018-10-28 15:18:25,701 basehttp 124 "GET /sms_code/18812345678/ HTTP/1.1" 200 16
+ERROR 2018-10-28 15:18:35,795 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/views.py", line 70, in post
+    if not serializer.is_valid():
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/serializers.py", line 34, in validate
+    if int(sms_code_redis) != int(sms_code_request):
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2018-10-28 15:18:35,864 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 500 18809
+INFO 2018-10-28 15:19:25,566 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 61
+INFO 2018-10-28 15:21:57,486 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 15:22:25,307 basehttp 124 "GET /oauth/qq/user/?code=12AE823B94F09770FDF5B3B64B8F3D90 HTTP/1.1" 200 233
+INFO 2018-10-28 15:22:34,208 basehttp 124 "GET /sms_code/18812345678/ HTTP/1.1" 200 16
+INFO 2018-10-28 15:26:30,049 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+INFO 2018-10-28 15:26:59,105 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 200 61
+INFO 2018-10-28 15:27:34,422 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-10-28 15:28:01,881 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/views.py", line 52, in get
+    "username": user.username,
+AttributeError: 'QQUser' object has no attribute 'username'
+ERROR 2018-10-28 15:28:02,046 basehttp 124 "GET /oauth/qq/user/?code=69C2C0DE08C334FAA476EA80F6B4F577 HTTP/1.1" 500 18981
+INFO 2018-10-28 15:28:43,143 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-10-28 15:29:08,676 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/views.py", line 52, in get
+    "username": user.username,
+AttributeError: 'QQUser' object has no attribute 'username'
+ERROR 2018-10-28 15:29:08,817 basehttp 124 "GET /oauth/qq/user/?code=6FBDDC950BC0256C4275DA5B86BF126F HTTP/1.1" 500 18981
+WARNING 2018-10-28 15:30:17,088 base 152 Not Found: /
+WARNING 2018-10-28 15:30:17,111 basehttp 124 "GET / HTTP/1.1" 404 2917
+WARNING 2018-10-28 15:30:17,693 base 152 Not Found: /favicon.ico
+WARNING 2018-10-28 15:30:17,711 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2968
+INFO 2018-10-28 15:30:30,037 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-10-28 15:34:21,944 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/views.py", line 52, in get
+    "username": user.username,
+AttributeError: 'QQUser' object has no attribute 'username'
+ERROR 2018-10-28 15:34:22,002 basehttp 124 "GET /oauth/qq/user/?code=CEDB21FDA3A8857253D3E72CCECD8B2F HTTP/1.1" 500 18298
+WARNING 2018-10-28 15:34:52,747 base 152 Not Found: /
+WARNING 2018-10-28 15:34:52,778 basehttp 124 "GET / HTTP/1.1" 404 2917
+WARNING 2018-10-28 15:34:53,222 base 152 Not Found: /favicon.ico
+WARNING 2018-10-28 15:34:53,227 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2968
+INFO 2018-10-28 15:35:19,580 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-10-28 15:35:30,597 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/views.py", line 52, in get
+    "username": user.username,
+AttributeError: 'QQUser' object has no attribute 'username'
+ERROR 2018-10-28 15:35:30,642 basehttp 124 "GET /oauth/qq/user/?code=50DAD97DB60E4AB7EAABB89CF2A44224 HTTP/1.1" 500 18298
+WARNING 2018-10-28 15:36:33,949 base 152 Not Found: /
+WARNING 2018-10-28 15:36:33,999 basehttp 124 "GET / HTTP/1.1" 404 2917
+WARNING 2018-10-28 15:36:34,654 base 152 Not Found: /favicon.ico
+WARNING 2018-10-28 15:36:34,680 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2968
+INFO 2018-10-28 15:36:56,612 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-10-28 15:37:13,433 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/views.py", line 52, in get
+    "username": user.username,
+AttributeError: 'QQUser' object has no attribute 'username'
+ERROR 2018-10-28 15:37:13,473 basehttp 124 "GET /oauth/qq/user/?code=8DB5A43B093F012F4FF06FF5907FE564 HTTP/1.1" 500 18298
+INFO 2018-10-28 15:42:21,847 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+ERROR 2018-10-28 15:42:38,022 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/oauth/views.py", line 55, in get
+    "token": generate(qquser.user)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/utils/jwt_token.py", line 5, in generate
+    jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/settings.py", line 216, in __getattr__
+    raise AttributeError("Invalid API setting: '%s'" % attr)
+AttributeError: Invalid API setting: 'JWT_PAYLOAD_HANDLER'
+ERROR 2018-10-28 15:42:38,101 basehttp 124 "GET /oauth/qq/user/?code=C5A0B502E2C0885950C1070A26A587B3 HTTP/1.1" 500 18646
+INFO 2018-10-28 15:44:01,025 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 195
+INFO 2018-10-28 15:44:13,350 basehttp 124 "GET /oauth/qq/user/?code=DF7E9C887C341D0263C6E002779D8AF7 HTTP/1.1" 200 214
+INFO 2018-10-28 15:58:53,620 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-28 15:58:53,815 basehttp 124 "GET /user/ HTTP/1.1" 200 86
+INFO 2018-10-28 15:58:53,839 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-28 15:58:53,855 base 152 Not Found: /browse_histories/
+WARNING 2018-10-28 15:58:53,859 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3147
+INFO 2018-10-31 12:51:03,426 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-31 12:51:03,708 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 218
+INFO 2018-10-31 12:51:11,429 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-31 12:51:11,782 basehttp 124 "GET /user/ HTTP/1.1" 200 88
+INFO 2018-10-31 12:51:11,854 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-31 12:51:11,886 base 152 Not Found: /browse_histories/
+WARNING 2018-10-31 12:51:11,891 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3474
+INFO 2018-10-31 12:51:20,087 basehttp 124 "OPTIONS /emails/ HTTP/1.1" 200 0
+ERROR 2018-10-31 12:51:20,188 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/users/serializers.py", line 122, in update
+    send_verify_email.delay(email, instance.generate_verify_email())
+AttributeError: 'User' object has no attribute 'generate_verify_email'
+ERROR 2018-10-31 12:51:20,281 basehttp 124 "PUT /emails/ HTTP/1.1" 500 19151
+ERROR 2018-10-31 12:51:59,605 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 211, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+ERROR 2018-10-31 12:51:59,753 basehttp 124 "PUT /emails/ HTTP/1.1" 500 18957
+INFO 2018-10-31 12:52:03,336 basehttp 124 "GET /user/ HTTP/1.1" 200 104
+WARNING 2018-10-31 12:52:03,652 base 152 Not Found: /browse_histories/
+WARNING 2018-10-31 12:52:03,654 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3474
+ERROR 2018-10-31 12:52:06,040 exception 135 Internal Server Error: /emails/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 211, in save
+    '`update()` did not return an object instance.'
+AssertionError: `update()` did not return an object instance.
+ERROR 2018-10-31 12:52:06,077 basehttp 124 "PUT /emails/ HTTP/1.1" 500 18957
+INFO 2018-10-31 12:55:22,202 basehttp 124 "GET /user/ HTTP/1.1" 200 88
+WARNING 2018-10-31 12:55:22,340 base 152 Not Found: /browse_histories/
+WARNING 2018-10-31 12:55:22,345 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3474
+INFO 2018-10-31 12:55:31,139 basehttp 124 "PUT /emails/ HTTP/1.1" 200 28
+INFO 2018-10-31 12:58:27,478 basehttp 124 "GET /user/ HTTP/1.1" 200 88
+WARNING 2018-10-31 12:58:27,648 base 152 Not Found: /browse_histories/
+WARNING 2018-10-31 12:58:27,651 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3474
+INFO 2018-10-31 12:58:35,539 basehttp 124 "PUT /emails/ HTTP/1.1" 200 28
+INFO 2018-10-31 12:59:09,542 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImV4cCI6MTU0MDk2OTExNSwiaWF0IjoxNTQwOTYxOTE1fQ.eyJ1c2VyX2lkIjozfQ.mXeqItN94XIvajEf9J8yIdn4DqKh_5W5W87hbN545JBLhntUIdKu5M6KYCCPc2OvhGuhrwnOc-YsD60LSB3AHw HTTP/1.1" 200 16
+INFO 2018-10-31 12:59:21,559 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+WARNING 2018-10-31 12:59:21,721 base 152 Not Found: /browse_histories/
+WARNING 2018-10-31 12:59:21,722 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3474
+INFO 2018-10-31 13:36:44,074 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+ERROR 2018-10-31 13:36:44,306 exception 135 Internal Server Error: /areas/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+WARNING 2018-10-31 13:36:44,380 base 152 Not Found: /addresses/
+WARNING 2018-10-31 13:36:44,403 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3783
+ERROR 2018-10-31 13:36:44,538 basehttp 124 "GET /areas/ HTTP/1.1" 500 70301
+ERROR 2018-10-31 13:37:44,055 exception 135 Internal Server Error: /areas/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+WARNING 2018-10-31 13:37:44,213 base 152 Not Found: /addresses/
+WARNING 2018-10-31 13:37:44,237 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3783
+ERROR 2018-10-31 13:37:44,289 basehttp 124 "GET /areas/ HTTP/1.1" 500 70166
+ERROR 2018-10-31 13:39:27,702 exception 135 Internal Server Error: /areas/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+WARNING 2018-10-31 13:39:27,719 base 152 Not Found: /addresses/
+WARNING 2018-10-31 13:39:27,736 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3783
+ERROR 2018-10-31 13:39:27,910 basehttp 124 "GET /areas/ HTTP/1.1" 500 70301
+INFO 2018-10-31 13:41:58,653 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-31 13:41:58,900 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-10-31 13:41:58,916 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-31 13:41:58,962 base 152 Not Found: /browse_histories/
+WARNING 2018-10-31 13:41:58,967 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3804
+ERROR 2018-10-31 13:42:01,138 exception 135 Internal Server Error: /areas/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes 1 positional argument but 2 were given
+INFO 2018-10-31 13:42:01,175 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+ERROR 2018-10-31 13:42:01,259 basehttp 124 "GET /areas/ HTTP/1.1" 500 70166
+WARNING 2018-10-31 13:42:01,297 base 152 Not Found: /addresses/
+WARNING 2018-10-31 13:42:01,298 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3783
+INFO 2018-10-31 13:46:18,905 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-31 13:46:19,263 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-10-31 13:46:19,282 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-31 13:46:19,317 base 152 Not Found: /browse_histories/
+WARNING 2018-10-31 13:46:19,335 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3804
+INFO 2018-10-31 13:46:21,926 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-10-31 13:46:22,107 base 152 Not Found: /addresses/
+WARNING 2018-10-31 13:46:22,117 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3783
+INFO 2018-10-31 13:46:22,212 basehttp 124 "GET /areas/ HTTP/1.1" 200 108508
+INFO 2018-10-31 13:46:27,192 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 575
+INFO 2018-10-31 13:46:28,587 basehttp 124 "GET /areas/110101/ HTTP/1.1" 200 42
+INFO 2018-10-31 13:57:13,321 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-10-31 13:57:14,039 base 152 Not Found: /addresses/
+WARNING 2018-10-31 13:57:14,044 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3783
+INFO 2018-10-31 13:57:15,257 basehttp 124 "GET /areas/ HTTP/1.1" 200 108508
+WARNING 2018-10-31 13:58:02,490 base 152 Not Found: /addresses/
+WARNING 2018-10-31 13:58:02,530 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3783
+INFO 2018-10-31 13:58:02,540 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 13:58:09,393 basehttp 124 "GET /areas/500000/ HTTP/1.1" 200 101
+INFO 2018-10-31 13:58:13,574 basehttp 124 "GET /areas/500200/ HTTP/1.1" 200 572
+INFO 2018-10-31 13:58:21,689 basehttp 124 "GET /areas/500100/ HTTP/1.1" 200 842
+INFO 2018-10-31 14:27:09,500 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-10-31 14:27:09,938 base 152 Not Found: /addresses/
+INFO 2018-10-31 14:27:09,946 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-10-31 14:27:09,966 basehttp 124 "GET /addresses/ HTTP/1.1" 404 4624
+INFO 2018-10-31 14:27:14,416 basehttp 124 "GET /areas/220000/ HTTP/1.1" 200 353
+INFO 2018-10-31 14:27:15,857 basehttp 124 "GET /areas/220200/ HTTP/1.1" 200 338
+INFO 2018-10-31 14:38:25,490 basehttp 124 "GET / HTTP/1.1" 200 5183
+INFO 2018-10-31 14:38:25,552 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-10-31 14:38:25,569 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-10-31 14:38:25,577 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-10-31 14:38:25,640 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-10-31 14:38:25,656 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-10-31 14:38:25,691 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-10-31 14:38:25,731 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-10-31 14:38:25,736 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-10-31 14:38:25,756 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-10-31 14:38:25,759 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2018-10-31 14:38:26,051 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2018-10-31 14:38:26,410 base 152 Not Found: /favicon.ico
+WARNING 2018-10-31 14:38:26,413 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 4627
+WARNING 2018-10-31 14:38:32,775 base 152 Not Found: /asd
+WARNING 2018-10-31 14:38:32,794 basehttp 124 "GET /asd HTTP/1.1" 404 4603
+INFO 2018-10-31 21:16:15,909 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-10-31 21:16:16,743 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-10-31 21:16:16,793 base 152 Not Found: /addresses/
+WARNING 2018-10-31 21:16:16,813 basehttp 124 "GET /addresses/ HTTP/1.1" 404 4624
+INFO 2018-10-31 21:16:26,332 basehttp 124 "GET /areas/460000/ HTTP/1.1" 200 224
+INFO 2018-10-31 21:16:28,010 basehttp 124 "GET /areas/460100/ HTTP/1.1" 200 173
+WARNING 2018-10-31 21:17:09,442 base 152 Not Found: /addresses/
+WARNING 2018-10-31 21:17:09,449 basehttp 124 "POST /addresses/ HTTP/1.1" 404 4625
+WARNING 2018-10-31 21:18:32,877 basehttp 124 "GET /addresses/ HTTP/1.1" 401 35
+INFO 2018-10-31 21:18:32,900 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 21:18:46,779 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2018-10-31 21:18:46,803 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:18:49,873 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:19:07,195 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:19:09,973 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:19:14,040 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:19:49,419 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:20:16,971 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:20:19,322 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:21:49,212 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:23:06,441 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:24:42,068 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:24:43,206 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+INFO 2018-10-31 21:32:32,922 basehttp 124 "GET /sms_code/19912345678/ HTTP/1.1" 200 16
+ERROR 2018-10-31 21:33:18,710 exceptions 26 [<users.views.UserCreateView object at 0x7f78693e8c88>] (1054, "Unknown column 'default_address_id' in 'field list'")
+ERROR 2018-10-31 21:33:18,716 basehttp 124 "POST /users/ HTTP/1.1" 507 35
+ERROR 2018-10-31 21:34:03,536 exceptions 26 [<users.views.UserCreateView object at 0x7f78693e84e0>] (1054, "Unknown column 'default_address_id' in 'field list'")
+ERROR 2018-10-31 21:34:03,542 basehttp 124 "POST /users/ HTTP/1.1" 507 35
+WARNING 2018-10-31 21:35:24,675 base 152 Not Found: /users/1/
+WARNING 2018-10-31 21:35:24,699 basehttp 124 "GET /users/1/ HTTP/1.1" 404 4618
+WARNING 2018-10-31 21:35:46,676 base 152 Not Found: /user/1/
+WARNING 2018-10-31 21:35:46,683 basehttp 124 "GET /user/1/ HTTP/1.1" 404 4615
+WARNING 2018-10-31 21:36:12,039 basehttp 124 "GET /user/ HTTP/1.1" 401 43
+WARNING 2018-10-31 21:36:25,865 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-10-31 21:36:26,853 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+ERROR 2018-10-31 21:36:49,939 exceptions 26 [<users.views.UserCreateView object at 0x7f78694342b0>] (1054, "Unknown column 'default_address_id' in 'field list'")
+ERROR 2018-10-31 21:36:49,945 basehttp 124 "POST /users/ HTTP/1.1" 507 35
+ERROR 2018-10-31 21:38:57,253 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/users/serializers.py", line 80, in validate
+    if int(sms_code_redis) != int(sms_code_request):
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2018-10-31 21:38:57,437 basehttp 124 "POST /users/ HTTP/1.1" 500 19077
+ERROR 2018-10-31 21:39:33,780 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/users/serializers.py", line 80, in validate
+    if int(sms_code_redis) != int(sms_code_request):
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2018-10-31 21:39:33,892 basehttp 124 "POST /users/ HTTP/1.1" 500 19077
+ERROR 2018-10-31 21:40:26,274 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/users/serializers.py", line 80, in validate
+    if int(sms_code_redis) != int(sms_code_request):
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2018-10-31 21:40:26,343 basehttp 124 "POST /users/ HTTP/1.1" 500 19077
+ERROR 2018-10-31 21:40:27,613 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/users/serializers.py", line 80, in validate
+    if int(sms_code_redis) != int(sms_code_request):
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+ERROR 2018-10-31 21:40:27,669 basehttp 124 "POST /users/ HTTP/1.1" 500 19077
+INFO 2018-10-31 21:44:54,914 basehttp 124 "GET /sms_code/19912345678/ HTTP/1.1" 200 16
+ERROR 2018-10-31 21:45:17,280 exceptions 26 [<users.views.UserCreateView object at 0x7f786911ed68>] (1054, "Unknown column 'default_address_id' in 'field list'")
+ERROR 2018-10-31 21:45:17,282 basehttp 124 "POST /users/ HTTP/1.1" 507 35
+ERROR 2018-10-31 21:46:43,793 exceptions 26 [<users.views.UserCreateView object at 0x7f786919bb00>] (1054, "Unknown column 'default_address_id' in 'field list'")
+ERROR 2018-10-31 21:46:43,798 basehttp 124 "POST /users/ HTTP/1.1" 507 35
+INFO 2018-10-31 21:48:31,380 basehttp 124 "POST /users/ HTTP/1.1" 201 259
+WARNING 2018-10-31 21:49:57,648 basehttp 124 "GET /users/ HTTP/1.1" 405 45
+INFO 2018-10-31 21:51:16,685 basehttp 124 "GET /user/ HTTP/1.1" 200 88
+INFO 2018-10-31 21:52:16,538 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-10-31 21:52:16,898 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 218
+WARNING 2018-10-31 21:53:41,839 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+INFO 2018-10-31 21:53:48,619 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 218
+INFO 2018-10-31 21:54:01,811 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-10-31 21:54:22,278 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-10-31 21:54:22,676 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-10-31 21:54:22,727 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-10-31 21:54:22,794 base 152 Not Found: /browse_histories/
+WARNING 2018-10-31 21:54:22,818 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 4645
+INFO 2018-10-31 21:54:28,652 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-10-31 21:54:28,804 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-10-31 21:54:29,018 base 152 Not Found: /addresses/
+WARNING 2018-10-31 21:54:29,026 basehttp 124 "GET /addresses/ HTTP/1.1" 404 4624
+INFO 2018-10-31 21:54:36,464 basehttp 124 "GET /areas/120000/ HTTP/1.1" 200 74
+INFO 2018-10-31 21:54:38,050 basehttp 124 "GET /areas/120100/ HTTP/1.1" 200 572
+WARNING 2018-10-31 21:54:53,406 base 152 Not Found: /addresses/
+WARNING 2018-10-31 21:54:53,416 basehttp 124 "POST /addresses/ HTTP/1.1" 404 4625
+INFO 2018-10-31 21:55:10,802 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+ERROR 2018-10-31 21:55:10,813 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 40, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/generics.py", line 68, in get_queryset
+    % self.__class__.__name__
+AssertionError: 'AddressViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2018-10-31 21:55:11,083 basehttp 124 "GET /addresses/ HTTP/1.1" 500 18838
+ERROR 2018-10-31 21:57:10,506 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+TypeError: 'User' object is not iterable
+INFO 2018-10-31 21:57:10,524 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+ERROR 2018-10-31 21:57:10,685 basehttp 124 "GET /addresses/ HTTP/1.1" 500 19063
+INFO 2018-10-31 21:59:01,570 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 21:59:01,609 basehttp 124 "GET /addresses/ HTTP/1.1" 200 2
+INFO 2018-10-31 22:05:08,016 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-10-31 22:05:08,658 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+ERROR 2018-10-31 22:05:08,887 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/viewsets.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 40, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/generics.py", line 68, in get_queryset
+    % self.__class__.__name__
+AssertionError: 'AddressViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2018-10-31 22:05:09,033 basehttp 124 "GET /addresses/ HTTP/1.1" 500 18805
+INFO 2018-10-31 22:05:44,262 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 74
+INFO 2018-10-31 22:05:45,348 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 575
+INFO 2018-10-31 22:05:56,156 basehttp 124 "POST /addresses/ HTTP/1.1" 201 237
+INFO 2018-10-31 22:21:29,498 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-10-31 22:21:30,021 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 22:21:30,083 basehttp 124 "GET /addresses/ HTTP/1.1" 200 301
+INFO 2018-10-31 22:22:22,984 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 74
+INFO 2018-10-31 22:22:25,495 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 575
+INFO 2018-10-31 22:22:35,556 basehttp 124 "POST /addresses/ HTTP/1.1" 201 237
+INFO 2018-10-31 22:26:01,028 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 22:26:01,193 basehttp 124 "GET /addresses/ HTTP/1.1" 200 527
+INFO 2018-10-31 22:26:35,621 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 74
+INFO 2018-10-31 22:26:35,629 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 575
+INFO 2018-10-31 22:26:40,227 basehttp 124 "OPTIONS /addresses/undefined/ HTTP/1.1" 200 0
+WARNING 2018-10-31 22:26:40,275 base 152 Not Found: /addresses/undefined/
+WARNING 2018-10-31 22:26:40,287 basehttp 124 "PUT /addresses/undefined/ HTTP/1.1" 404 25
+WARNING 2018-10-31 22:26:45,973 base 152 Not Found: /addresses/undefined/
+WARNING 2018-10-31 22:26:45,990 basehttp 124 "PUT /addresses/undefined/ HTTP/1.1" 404 25
+INFO 2018-10-31 22:31:34,612 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-10-31 22:31:35,274 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 22:31:35,463 basehttp 124 "GET /addresses/ HTTP/1.1" 200 505
+INFO 2018-10-31 22:31:42,925 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 74
+INFO 2018-10-31 22:31:42,946 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 575
+INFO 2018-10-31 22:31:49,895 basehttp 124 "OPTIONS /addresses/1/ HTTP/1.1" 200 0
+INFO 2018-10-31 22:31:49,976 basehttp 124 "PUT /addresses/1/ HTTP/1.1" 200 224
+INFO 2018-10-31 22:31:53,002 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 22:31:53,089 basehttp 124 "GET /addresses/ HTTP/1.1" 200 509
+INFO 2018-10-31 22:47:57,695 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-10-31 22:47:58,185 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 22:47:58,361 basehttp 124 "GET /addresses/ HTTP/1.1" 200 509
+INFO 2018-10-31 22:48:02,323 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 22:48:02,452 basehttp 124 "GET /addresses/ HTTP/1.1" 200 509
+INFO 2018-10-31 22:48:05,853 basehttp 124 "OPTIONS /addresses/1/status/ HTTP/1.1" 200 0
+INFO 2018-10-31 22:48:05,920 basehttp 124 "PUT /addresses/1/status/ HTTP/1.1" 200 16
+INFO 2018-10-31 22:48:08,433 basehttp 124 "OPTIONS /addresses/2/status/ HTTP/1.1" 200 0
+INFO 2018-10-31 22:48:08,474 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 200 16
+INFO 2018-10-31 22:48:24,815 basehttp 124 "OPTIONS /addresses/1/title/ HTTP/1.1" 200 0
+INFO 2018-10-31 22:48:24,849 basehttp 124 "PUT /addresses/1/title/ HTTP/1.1" 200 16
+INFO 2018-10-31 22:48:26,961 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 22:48:27,093 basehttp 124 "GET /addresses/ HTTP/1.1" 200 505
+INFO 2018-10-31 22:49:10,597 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 22:49:10,753 basehttp 124 "GET /addresses/ HTTP/1.1" 200 505
+INFO 2018-10-31 22:49:15,194 basehttp 124 "PUT /addresses/1/title/ HTTP/1.1" 200 19
+INFO 2018-10-31 22:49:17,560 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-10-31 22:49:17,682 basehttp 124 "GET /addresses/ HTTP/1.1" 200 508
+INFO 2018-11-01 21:45:55,537 basehttp 124 "GET / HTTP/1.1" 200 5183
+INFO 2018-11-01 21:45:55,578 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-11-01 21:45:55,584 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-11-01 21:45:55,608 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-11-01 21:45:55,630 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-11-01 21:45:55,648 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-11-01 21:45:55,655 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-11-01 21:45:55,666 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-11-01 21:45:55,675 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-11-01 21:45:55,678 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-11-01 21:45:55,679 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2018-11-01 21:45:56,104 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2018-11-01 21:45:57,056 base 152 Not Found: /favicon.ico
+WARNING 2018-11-01 21:45:57,063 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6842
+INFO 2018-11-01 21:46:21,957 basehttp 124 "GET /admin/ HTTP/1.1" 302 0
+INFO 2018-11-01 21:46:22,813 basehttp 124 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1652
+INFO 2018-11-01 21:46:22,977 basehttp 124 "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+INFO 2018-11-01 21:46:23,002 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 200 16066
+INFO 2018-11-01 21:46:24,269 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2018-11-01 21:46:24,448 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+INFO 2018-11-01 21:46:24,516 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+WARNING 2018-11-01 21:46:24,946 base 152 Not Found: /favicon.ico
+WARNING 2018-11-01 21:46:24,954 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 6848
+INFO 2018-11-01 21:46:33,188 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1784
+INFO 2018-11-01 21:46:33,242 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+INFO 2018-11-01 21:46:38,088 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1784
+INFO 2018-11-01 21:46:43,910 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1784
+INFO 2018-11-01 21:48:07,668 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2018-11-01 21:48:07,833 basehttp 124 "GET /admin/ HTTP/1.1" 200 7507
+INFO 2018-11-01 21:48:07,864 basehttp 124 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+INFO 2018-11-01 21:48:08,087 basehttp 124 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2018-11-01 21:48:08,093 basehttp 124 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2018-11-01 21:48:16,349 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8575
+INFO 2018-11-01 21:48:16,380 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+INFO 2018-11-01 21:48:16,398 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 200 7976
+INFO 2018-11-01 21:48:16,425 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+INFO 2018-11-01 21:48:16,432 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+INFO 2018-11-01 21:48:16,436 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6591
+INFO 2018-11-01 21:48:16,440 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 200 6501
+INFO 2018-11-01 21:48:16,447 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 200 8186
+INFO 2018-11-01 21:48:16,472 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+INFO 2018-11-01 21:48:16,481 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+INFO 2018-11-01 21:48:16,530 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 21:48:16,829 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2018-11-01 21:48:18,543 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34195
+INFO 2018-11-01 21:48:18,577 basehttp 124 "GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+INFO 2018-11-01 21:48:18,624 basehttp 124 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2018-11-01 21:48:18,626 basehttp 124 "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+INFO 2018-11-01 21:48:18,636 basehttp 124 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+INFO 2018-11-01 21:48:18,661 basehttp 124 "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+INFO 2018-11-01 21:48:18,726 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 21:48:22,870 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8575
+INFO 2018-11-01 21:48:24,426 basehttp 124 "GET /admin/goods/sku/add/ HTTP/1.1" 200 33585
+INFO 2018-11-01 21:48:24,501 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 21:48:32,883 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8575
+INFO 2018-11-01 21:50:40,121 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34195
+INFO 2018-11-01 21:50:40,392 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 21:50:44,841 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8575
+INFO 2018-11-01 21:55:21,308 basehttp 124 "GET /admin/ HTTP/1.1" 200 7507
+INFO 2018-11-01 21:55:26,196 basehttp 124 "GET /admin/goods/skuspecification/ HTTP/1.1" 200 14835
+INFO 2018-11-01 21:55:26,279 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 21:55:29,718 basehttp 124 "GET /admin/goods/skuspecification/6/change/ HTTP/1.1" 200 11141
+INFO 2018-11-01 21:55:29,932 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 21:55:32,465 basehttp 124 "GET /admin/goods/skuspecification/ HTTP/1.1" 200 14835
+INFO 2018-11-01 21:55:35,819 basehttp 124 "GET /admin/ HTTP/1.1" 200 7507
+INFO 2018-11-01 21:55:38,090 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15618
+INFO 2018-11-01 21:55:38,252 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 21:55:40,111 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6595
+INFO 2018-11-01 21:55:40,248 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 21:55:48,104 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 200 6735
+INFO 2018-11-01 21:55:48,348 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 21:55:53,918 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 200 6735
+INFO 2018-11-01 21:55:54,066 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+ERROR 2018-11-01 21:55:58,375 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 500 59
+ERROR 2018-11-01 22:01:39,697 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 500 59
+INFO 2018-11-01 22:01:42,798 basehttp 124 "GET /admin/goods/ HTTP/1.1" 200 5582
+INFO 2018-11-01 22:01:47,290 basehttp 124 "GET /admin/ HTTP/1.1" 200 7507
+INFO 2018-11-01 22:01:49,719 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15618
+INFO 2018-11-01 22:01:49,915 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:01:53,221 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6595
+INFO 2018-11-01 22:01:53,452 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+ERROR 2018-11-01 22:02:00,149 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 500 59
+INFO 2018-11-01 22:03:22,503 basehttp 124 "GET /admin/ HTTP/1.1" 200 7507
+INFO 2018-11-01 22:03:24,556 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15618
+INFO 2018-11-01 22:03:24,760 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:03:26,531 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6595
+INFO 2018-11-01 22:03:26,662 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+ERROR 2018-11-01 22:03:31,275 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 500 59
+INFO 2018-11-01 22:04:17,917 basehttp 124 "GET /admin/ HTTP/1.1" 200 7507
+INFO 2018-11-01 22:04:19,776 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15618
+INFO 2018-11-01 22:04:19,854 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:04:21,128 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6595
+INFO 2018-11-01 22:04:21,243 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+ERROR 2018-11-01 22:04:25,840 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 500 59
+INFO 2018-11-01 22:05:57,302 basehttp 124 "GET /admin HTTP/1.1" 301 0
+INFO 2018-11-01 22:05:57,504 basehttp 124 "GET /admin/ HTTP/1.1" 200 7507
+INFO 2018-11-01 22:06:00,035 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15618
+INFO 2018-11-01 22:06:00,361 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:06:02,100 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6595
+INFO 2018-11-01 22:06:02,230 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+ERROR 2018-11-01 22:06:06,861 exception 135 Internal Server Error: /admin/goods/skuimage/add/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1508, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1448, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 979, in save_model
+    obj.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 838, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 924, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 963, in _do_insert
+    using=using, raw=raw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/query.py", line 1076, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1111, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1064, in as_sql
+    for obj in self.query.objs
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1064, in <listcomp>
+    for obj in self.query.objs
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1063, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1013, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/fields/files.py", line 296, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/fields/files.py", line 94, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/utils/fastdfs/storage.py", line 18, in save
+    ret = fdfs_client.upload_by_buffer(content.read())
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/fdfs_client/client.py", line 125, in upload_by_buffer
+    store_serv = tc.tracker_query_storage_stor_without_group()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/fdfs_client/tracker_client.py", line 381, in tracker_query_storage_stor_without_group
+    raise DataError('[-] Error: %d, %s' % (th.status, os.strerror(th.status)))
+fdfs_client.exceptions.DataError: [-] Error: 2, No such file or directory
+ERROR 2018-11-01 22:06:07,106 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 500 211264
+INFO 2018-11-01 22:08:24,743 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6595
+INFO 2018-11-01 22:08:36,168 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15618
+INFO 2018-11-01 22:08:38,420 basehttp 124 "GET /admin/goods/skuimage/43/change/ HTTP/1.1" 200 7072
+INFO 2018-11-01 22:08:38,631 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:10:49,510 basehttp 124 "GET /admin/goods/skuimage/43/change/ HTTP/1.1" 200 7072
+INFO 2018-11-01 22:10:58,445 basehttp 124 "GET /admin/goods/skuimage/43/change/ HTTP/1.1" 200 7072
+INFO 2018-11-01 22:11:56,274 basehttp 124 "GET /admin/goods/skuimage/43/change/ HTTP/1.1" 200 7072
+INFO 2018-11-01 22:22:05,225 basehttp 124 "GET /admin/goods/skuimage/43/change/ HTTP/1.1" 200 7072
+INFO 2018-11-01 22:22:16,868 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15618
+INFO 2018-11-01 22:22:19,782 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6595
+INFO 2018-11-01 22:22:20,012 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:22:26,577 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 302 0
+INFO 2018-11-01 22:22:27,062 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 16095
+INFO 2018-11-01 22:22:27,346 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:22:27,636 basehttp 124 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2018-11-01 22:22:29,326 basehttp 124 "GET /admin/goods/skuimage/44/change/ HTTP/1.1" 200 7034
+INFO 2018-11-01 22:22:29,455 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:22:48,018 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15883
+INFO 2018-11-01 22:22:52,269 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6595
+INFO 2018-11-01 22:22:53,895 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15883
+INFO 2018-11-01 22:22:56,660 basehttp 124 "GET /admin/goods/ HTTP/1.1" 200 5582
+INFO 2018-11-01 22:23:00,298 basehttp 124 "GET /admin/goods/brand/ HTTP/1.1" 200 4405
+INFO 2018-11-01 22:23:00,487 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:23:01,659 basehttp 124 "GET /admin/goods/brand/2/change/ HTTP/1.1" 200 5229
+INFO 2018-11-01 22:23:01,754 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:23:05,019 basehttp 124 "GET /admin/goods/brand/ HTTP/1.1" 200 4405
+INFO 2018-11-01 22:23:08,009 basehttp 124 "GET /admin/goods/ HTTP/1.1" 200 5582
+INFO 2018-11-01 22:31:36,582 basehttp 124 "GET /admin/goods/goods/ HTTP/1.1" 200 4663
+INFO 2018-11-01 22:31:36,723 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:31:38,956 basehttp 124 "GET /admin/goods/goods/3/change/ HTTP/1.1" 200 87285
+INFO 2018-11-01 22:31:39,124 basehttp 124 "GET /static/ckeditor/ckeditor-init.js HTTP/1.1" 200 2039
+INFO 2018-11-01 22:31:39,143 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:31:39,149 basehttp 124 "GET /static/ckeditor/ckeditor/ckeditor.js HTTP/1.1" 200 690627
+INFO 2018-11-01 22:31:40,091 basehttp 124 "GET /static/ckeditor/ckeditor/config.js?t=I3I8 HTTP/1.1" 200 338
+INFO 2018-11-01 22:31:40,144 basehttp 124 "GET /static/ckeditor/ckeditor/skins/moono-lisa/editor.css?t=I3I8 HTTP/1.1" 200 46921
+INFO 2018-11-01 22:31:40,148 basehttp 124 "GET /static/ckeditor/ckeditor/lang/zh-cn.js?t=I3I8 HTTP/1.1" 200 18818
+INFO 2018-11-01 22:31:40,256 basehttp 124 "GET /static/ckeditor/ckeditor/styles.js?t=I3I8 HTTP/1.1" 200 5583
+INFO 2018-11-01 22:31:40,297 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css HTTP/1.1" 200 381
+INFO 2018-11-01 22:31:40,298 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css HTTP/1.1" 200 419
+INFO 2018-11-01 22:31:40,317 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css HTTP/1.1" 200 1082
+INFO 2018-11-01 22:31:40,318 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css HTTP/1.1" 200 1306
+INFO 2018-11-01 22:31:40,354 basehttp 124 "GET /static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css HTTP/1.1" 200 1513
+INFO 2018-11-01 22:31:40,483 basehttp 124 "GET /static/ckeditor/ckeditor/skins/moono-lisa/icons.png?t=95e5d83 HTTP/1.1" 200 12421
+INFO 2018-11-01 22:31:40,611 basehttp 124 "GET /static/ckeditor/ckeditor/contents.css?t=I3I8 HTTP/1.1" 200 2954
+INFO 2018-11-01 22:51:10,373 basehttp 124 "GET /admin/ HTTP/1.1" 200 7873
+INFO 2018-11-01 22:51:13,764 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15618
+INFO 2018-11-01 22:51:14,004 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:51:20,190 basehttp 124 "GET /admin/goods/skuimage/4/change/ HTTP/1.1" 200 7031
+INFO 2018-11-01 22:51:20,395 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:51:30,456 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15618
+INFO 2018-11-01 22:51:38,944 basehttp 124 "GET /admin/goods/skuimage/add/ HTTP/1.1" 200 6595
+INFO 2018-11-01 22:51:39,211 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:51:45,787 basehttp 124 "POST /admin/goods/skuimage/add/ HTTP/1.1" 302 0
+INFO 2018-11-01 22:51:46,344 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 16095
+INFO 2018-11-01 22:51:46,511 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:51:52,874 basehttp 124 "GET /admin/goods/skuimage/44/change/ HTTP/1.1" 200 7034
+INFO 2018-11-01 22:51:53,060 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:52:35,238 basehttp 124 "GET /admin/goods/skuimage/44/change/ HTTP/1.1" 200 7034
+INFO 2018-11-01 22:52:35,536 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,540 basehttp 124 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,624 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,625 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,627 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,645 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-01 22:52:35,646 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,668 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,671 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,692 basehttp 124 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,697 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,720 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,721 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,726 basehttp 124 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,741 basehttp 124 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,751 basehttp 124 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,753 basehttp 124 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,876 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,883 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:35,889 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-01 22:52:37,647 basehttp 124 "GET /admin/goods/skuimage/ HTTP/1.1" 200 15883
+INFO 2018-11-02 09:35:12,957 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-11-02 09:35:13,373 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+INFO 2018-11-02 09:35:19,791 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2018-11-02 09:35:19,895 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+INFO 2018-11-02 09:35:22,922 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-11-02 09:35:23,566 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-02 09:35:23,722 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-02 09:35:23,840 base 152 Not Found: /browse_histories/
+WARNING 2018-11-02 09:35:23,844 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 6866
+WARNING 2018-11-02 09:36:30,293 base 152 Not Found: /categories/115/skus/
+INFO 2018-11-02 09:36:30,322 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-02 09:36:30,318 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 09:36:30,338 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 404 6924
+WARNING 2018-11-02 09:36:30,346 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 6860
+WARNING 2018-11-02 09:36:30,641 base 152 Not Found: /cart/
+WARNING 2018-11-02 09:36:30,648 basehttp 124 "GET /cart/ HTTP/1.1" 404 6830
+INFO 2018-11-02 10:20:15,894 basehttp 124 "GET /admin/ HTTP/1.1" 200 8204
+WARNING 2018-11-02 10:20:16,788 base 152 Not Found: /favicon.ico
+WARNING 2018-11-02 10:20:16,796 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 7041
+INFO 2018-11-02 10:20:49,707 basehttp 124 "GET /categories/115/skus/ HTTP/1.1" 200 11990
+INFO 2018-11-02 10:20:49,893 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-11-02 10:20:49,897 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-11-02 10:20:49,899 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-11-02 10:20:49,902 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-11-02 10:20:49,903 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-11-02 10:20:49,911 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-11-02 10:20:49,996 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-11-02 10:20:50,022 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-11-02 10:20:50,023 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-11-02 10:20:50,040 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+INFO 2018-11-02 10:20:50,420 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2018-11-02 10:31:57,220 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-02 10:31:57,787 base 152 Not Found: /cart/
+WARNING 2018-11-02 10:31:57,793 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+INFO 2018-11-02 10:32:36,482 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:32:36,839 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1246
+INFO 2018-11-02 10:32:38,630 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:32:39,410 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1246
+INFO 2018-11-02 10:32:40,260 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:32:40,717 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:32:41,590 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:32:47,982 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:32:51,773 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:33:51,535 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1246
+WARNING 2018-11-02 10:34:10,414 base 152 Not Found: /cart/
+WARNING 2018-11-02 10:34:10,440 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+WARNING 2018-11-02 10:34:10,405 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 10:34:10,442 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+INFO 2018-11-02 10:34:10,493 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+WARNING 2018-11-02 10:35:33,533 base 152 Not Found: /cart/
+WARNING 2018-11-02 10:35:33,541 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 10:35:33,555 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+WARNING 2018-11-02 10:35:33,609 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+INFO 2018-11-02 10:35:33,616 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:35:48,862 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:35:49,457 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1246
+INFO 2018-11-02 10:35:50,068 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:35:51,459 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:35:51,830 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1246
+INFO 2018-11-02 10:35:52,382 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:35:52,761 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:35:53,566 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:35:53,891 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1246
+INFO 2018-11-02 10:35:54,325 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:35:54,645 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:35:54,986 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:35:55,275 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1246
+INFO 2018-11-02 10:35:55,786 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:35:56,066 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:35:57,018 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:35:57,287 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1246
+INFO 2018-11-02 10:36:09,510 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:36:11,248 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 1312
+INFO 2018-11-02 10:36:11,685 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1246
+INFO 2018-11-02 10:36:12,366 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:36:13,538 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 1246
+INFO 2018-11-02 10:36:14,052 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:38:33,636 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 1385
+INFO 2018-11-02 10:38:34,910 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 1085
+WARNING 2018-11-02 10:38:51,158 base 152 Not Found: /categories/116/
+WARNING 2018-11-02 10:38:51,174 base 152 Not Found: /cart/
+WARNING 2018-11-02 10:38:51,180 basehttp 124 "GET /categories/116/ HTTP/1.1" 404 7053
+WARNING 2018-11-02 10:38:51,183 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+INFO 2018-11-02 10:38:51,207 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:54,736 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:55,669 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:56,196 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:56,600 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:56,925 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:57,157 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:57,665 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:57,941 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:58,262 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:58,520 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:58,873 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:59,213 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:59,582 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:38:59,849 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 52
+INFO 2018-11-02 10:39:00,348 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:39:00,729 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+INFO 2018-11-02 10:39:01,030 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:39:01,266 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 52
+INFO 2018-11-02 10:39:01,627 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:39:01,882 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+INFO 2018-11-02 10:39:02,326 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:39:02,565 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=sales HTTP/1.1" 200 52
+INFO 2018-11-02 10:39:03,053 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=price HTTP/1.1" 200 52
+INFO 2018-11-02 10:39:03,358 basehttp 124 "GET /categories/116/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+WARNING 2018-11-02 10:40:22,064 base 152 Not Found: /categories/119/
+WARNING 2018-11-02 10:40:22,078 base 152 Not Found: /cart/
+WARNING 2018-11-02 10:40:22,107 basehttp 124 "GET /categories/119/ HTTP/1.1" 404 7053
+WARNING 2018-11-02 10:40:22,112 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+INFO 2018-11-02 10:40:22,172 basehttp 124 "GET /categories/119/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 52
+WARNING 2018-11-02 10:41:38,018 base 152 Not Found: /cart/
+WARNING 2018-11-02 10:41:38,054 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 10:41:38,058 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+WARNING 2018-11-02 10:41:38,060 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+INFO 2018-11-02 10:41:38,120 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:41:43,640 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 1385
+INFO 2018-11-02 10:41:45,267 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 1085
+INFO 2018-11-02 10:41:47,441 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 10:46:48,113 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-02 10:46:48,209 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 10:46:48,295 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+INFO 2018-11-02 10:46:48,696 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+WARNING 2018-11-02 10:46:49,311 base 152 Not Found: /cart/
+WARNING 2018-11-02 10:46:49,316 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+INFO 2018-11-02 11:16:05,565 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-02 11:16:05,580 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 11:16:05,602 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+INFO 2018-11-02 11:16:05,678 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+WARNING 2018-11-02 11:16:05,969 base 152 Not Found: /cart/
+WARNING 2018-11-02 11:16:05,981 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+WARNING 2018-11-02 11:16:22,698 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 11:16:22,722 base 152 Not Found: /cart/
+WARNING 2018-11-02 11:16:22,725 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+WARNING 2018-11-02 11:16:22,740 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+INFO 2018-11-02 11:16:22,845 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 3227
+WARNING 2018-11-02 11:16:42,254 base 152 Not Found: /cart/
+WARNING 2018-11-02 11:16:42,279 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 11:16:42,303 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+WARNING 2018-11-02 11:16:42,311 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+INFO 2018-11-02 11:16:42,377 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 806
+INFO 2018-11-02 11:17:17,785 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 935
+INFO 2018-11-02 11:17:19,024 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 887
+INFO 2018-11-02 11:17:20,216 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 806
+INFO 2018-11-02 11:17:20,813 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 935
+INFO 2018-11-02 11:17:21,475 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 806
+INFO 2018-11-02 11:17:22,065 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 935
+INFO 2018-11-02 11:17:22,965 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 806
+INFO 2018-11-02 11:17:23,314 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 935
+INFO 2018-11-02 11:17:23,844 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 806
+INFO 2018-11-02 11:17:24,397 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 200 935
+WARNING 2018-11-02 11:17:43,659 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 11:17:43,665 base 152 Not Found: /cart/
+WARNING 2018-11-02 11:17:43,682 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+WARNING 2018-11-02 11:17:43,690 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+INFO 2018-11-02 11:17:43,774 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 806
+WARNING 2018-11-02 11:17:54,406 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 11:17:54,441 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+WARNING 2018-11-02 11:17:54,469 base 152 Not Found: /cart/
+WARNING 2018-11-02 11:17:54,507 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+INFO 2018-11-02 11:17:54,547 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 806
+WARNING 2018-11-02 11:19:37,693 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 11:19:37,701 base 152 Not Found: /cart/
+WARNING 2018-11-02 11:19:37,714 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+WARNING 2018-11-02 11:19:37,719 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+INFO 2018-11-02 11:19:37,842 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 2419
+INFO 2018-11-02 11:19:42,443 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 1078
+WARNING 2018-11-02 11:19:44,497 base 152 Not Found: /categories/115/skus/
+WARNING 2018-11-02 11:19:44,512 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 404 28
+INFO 2018-11-02 11:19:46,235 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 1078
+INFO 2018-11-02 11:19:47,188 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 2419
+INFO 2018-11-02 11:19:49,565 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 200 1078
+WARNING 2018-11-02 11:20:09,154 base 152 Not Found: /cart/
+WARNING 2018-11-02 11:20:09,159 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 11:20:09,173 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+WARNING 2018-11-02 11:20:09,175 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+INFO 2018-11-02 11:20:09,305 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 3278
+WARNING 2018-11-02 11:20:13,843 base 152 Not Found: /categories/115/skus/
+WARNING 2018-11-02 11:20:13,883 basehttp 124 "GET /categories/115/skus/?page=2&page_size=5&ordering=-create_time HTTP/1.1" 404 28
+WARNING 2018-11-02 11:20:14,804 base 152 Not Found: /categories/115/skus/
+WARNING 2018-11-02 11:20:14,823 basehttp 124 "GET /categories/115/skus/?page=3&page_size=5&ordering=-create_time HTTP/1.1" 404 28
+INFO 2018-11-02 19:19:28,469 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-02 19:19:28,688 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 19:19:28,757 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 7053
+WARNING 2018-11-02 19:19:28,883 base 152 Not Found: /cart/
+WARNING 2018-11-02 19:19:28,898 basehttp 124 "GET /cart/ HTTP/1.1" 404 7023
+INFO 2018-11-02 19:19:29,095 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-02 20:12:11,827 basehttp 124 "GET /skus/search/?text=wifi HTTP/1.1" 200 52
+INFO 2018-11-02 20:12:28,880 basehttp 124 "GET /skus/search/?text=%E8%8D%A3%E8%80%80 HTTP/1.1" 200 52
+INFO 2018-11-02 20:12:29,742 basehttp 124 "GET /skus/search/?text=%E8%8D%A3%E8%80%80 HTTP/1.1" 200 52
+INFO 2018-11-02 20:14:23,317 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA HTTP/1.1" 200 52
+INFO 2018-11-02 20:14:28,785 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA HTTP/1.1" 200 52
+INFO 2018-11-02 20:14:42,310 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-02 20:14:42,628 base 152 Not Found: /categories/115/
+WARNING 2018-11-02 20:14:42,652 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8272
+INFO 2018-11-02 20:14:43,123 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+WARNING 2018-11-02 20:14:43,254 base 152 Not Found: /cart/
+WARNING 2018-11-02 20:14:43,260 basehttp 124 "GET /cart/ HTTP/1.1" 404 8242
+INFO 2018-11-02 20:15:08,638 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA&page=1&page_size=6 HTTP/1.1" 200 52
+INFO 2018-11-02 20:17:07,191 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA&page=1&page_size=6 HTTP/1.1" 200 2681
+INFO 2018-11-02 20:17:46,292 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-11-02 20:17:46,530 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+INFO 2018-11-02 20:17:49,363 basehttp 124 "GET /oauth/qq/authorization/?next=/user_center_info.html HTTP/1.1" 200 216
+INFO 2018-11-02 20:17:54,185 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2018-11-02 20:17:54,224 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-11-02 20:17:57,508 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+INFO 2018-11-02 20:18:00,388 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-11-02 20:18:01,075 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-02 20:18:01,151 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-02 20:18:01,210 base 152 Not Found: /browse_histories/
+WARNING 2018-11-02 20:18:01,216 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 8278
+INFO 2018-11-02 20:18:05,514 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA HTTP/1.1" 200 3446
+INFO 2018-11-02 20:18:20,486 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA&page=1&page_size=6 HTTP/1.1" 200 2681

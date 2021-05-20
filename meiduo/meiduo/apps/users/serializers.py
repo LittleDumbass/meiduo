@@ -1,15 +1,20 @@
+from django.core.mail import send_mail
 from django_redis import get_redis_connection
 from rest_framework import serializers
 from rest_framework.response import Response
 from rest_framework_jwt.settings import api_settings
+from celery_tasks.email.tasks import send_verify_email
+from users import constants
 
-from users.models import User
+from users.models import User, Address
+from utils import tjws
 
 
 class UserModelSerializer(serializers.Serializer):
     """用户序列化器"""
     id = serializers.IntegerField(read_only=True)
     token = serializers.CharField(read_only=True)
+    default_address = serializers.IntegerField(read_only=True)
     username = serializers.CharField(
         min_length=5,
         max_length=20,
@@ -55,7 +60,7 @@ class UserModelSerializer(serializers.Serializer):
         return value
 
     # 验证勾选协议是否
-    def validate_allow(self,value):
+    def validate_allow(self, value):
         if value is None:
             raise serializers.ValidationError("请先阅读协议并同意")
         return value
@@ -91,7 +96,69 @@ class UserModelSerializer(serializers.Serializer):
         payload = jwt_payload_handler(user)
         token = jwt_encode_handler(payload)
 
+        # 不需要保存在服务器的
         user.token = token
 
         return user
 
+
+class UserDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'mobile', 'email', 'email_active']
+
+
+class EmailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['email']
+
+    def update(self, instance, validated_data):
+        # 接收参数
+        email = validated_data.get('email')
+        # 修改
+        instance.email = email
+
+        # 保存之前需要发邮箱验证,用celery里面的方法发
+        send_verify_email.delay(email, instance.generate_verify_email_token())
+
+        # 保存
+        instance.save()
+
+        return instance
+
+
+class AddressSerializer(serializers.ModelSerializer):
+    province_id = serializers.IntegerField()
+    city_id = serializers.IntegerField()
+    district_id = serializers.IntegerField()
+
+    province = serializers.StringRelatedField(read_only=True)
+    city = serializers.StringRelatedField(read_only=True)
+    district = serializers.StringRelatedField(read_only=True)
+
+    class Meta:
+        model = Address
+        exclude = ['is_delete', 'create_time', 'update_time', 'user']
+
+    def create(self, validated_data):
+        user = self.context['request'].user
+        validated_data['user'] = user
+        address = super().create(validated_data)
+        return address
+
+
+class EmailActiveSerializer(serializers.Serializer):
+    token = serializers.CharField(max_length=200)
+
+    def validate(self, attrs):
+        token = attrs['token']
+
+        data_dict = tjws.loads(token, constants.USER_EMAIL_TOKEN_EXPIRES)
+
+        if data_dict is None:
+            raise serializers.ValidationError('激活链接已经过期')
+
+        attrs['user_id'] = data_dict['user_id']
+
+        return attrs

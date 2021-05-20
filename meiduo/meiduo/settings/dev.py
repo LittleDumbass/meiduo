@@ -48,11 +48,19 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'verifications.apps.VerificationsConfig',
     'oauth.apps.OauthConfig',
+    'areas.apps.AreasConfig',
+    'goods.apps.GoodsConfig',
+    'contents.apps.ContentsConfig',
     'rest_framework',
-    'corsheaders',
+    'corsheaders',  # 这个包用来响应options请求的
+    'ckeditor',  # 富文本编辑器
+    'ckeditor_uploader',  # 富文本编辑器上传图片模块
+    'django_crontab',  # 定时任务
+    'haystack',
 ]
 
 MIDDLEWARE = [
+    # corsheaders的中间件
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -160,6 +168,7 @@ CACHES = {
 }
 # 指定session使用缓存进行保存，缓存设置保存在redis
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+# 使用第二个配置来存session
 SESSION_CACHE_ALIAS = "session"
 
 # 日志
@@ -208,32 +217,108 @@ LOGGING = {
 REST_FRAMEWORK = {
     # 异常处理
     'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
-    #身份认证的方式：jwt,session,basic
+    # 身份认证的方式：jwt,session,basic
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        #前后端分离使用jwt验证
+        # 前后端分离使用jwt验证
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        #访问admin后台时使用
+        # 访问admin后台时使用
         'rest_framework.authentication.SessionAuthentication',
     ),
 }
 
+# DRF扩展  收货地址区域查询时使用缓存CacheResponseMixin
+REST_FRAMEWORK_EXTENSIONS = {
+    # 缓存时间
+    'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 60,
+    # 缓存存储
+    'DEFAULT_USE_CACHE': 'default',
+}
+
 import datetime
-#配置jwt
+
+# 配置jwt
 JWT_AUTH = {
-    #过期时间，为2小时
+    # 过期时间，为2小时
     'JWT_EXPIRATION_DELTA': datetime.timedelta(hours=2),
+    # 这里使用users模块里面自己定义的obtain_jwt_token视图的输出内容
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.utils.jwt_response_payload_handler',
 }
 
 # CORS白名单
 CORS_ORIGIN_WHITELIST = (
-    'www.meiduo.site:8080',
+    'www.meiduo.site:8080',  # 允许这个网站跨站访问后端
 )
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
 
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User'  # 使用自己定义的User
 
 AUTHENTICATION_BACKENDS = [
     'users.utils.MyModel',
 ]
 
+# QQ登录参数
+QQ_CLIENT_ID = '101474184'  # appid
+QQ_CLIENT_SECRET = 'c6ce949e04e12ecc909ae6a8b09b637c'  # appkey
+QQ_REDIRECT_URI = 'http://www.meiduo.site:8080/oauth_callback.html'  # 回调地址
+QQ_STATE = '/'  # 登录成功后返回到网站的哪个页面
+
+# 邮箱后端，不可改
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# 邮件服务器，可修改
+EMAIL_HOST = 'smtp.163.com'
+# 邮件服务器端口，可修改
+EMAIL_PORT = 25
+# 发送邮件的邮箱，可修改
+EMAIL_HOST_USER = 'm16625139066@163.com'
+# 在邮箱中设置的客户端授权密码，可修改
+EMAIL_HOST_PASSWORD = 'chishaokao1022'
+# 收件人看到的发件人，可修改
+EMAIL_FROM = '商城<m16625139066@163.com>'
+
+# FastDFS
+# 访问url+远程传回来的url
+FDFS_URL = 'http://image.meiduo.site:8888/'
+# fastdfs的配置文件
+FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fastdfs/client.conf')
+# django文件存储, 让django用这个类来存图片文件
+DEFAULT_FILE_STORAGE = 'utils.fastdfs.storage.FdfsStorage'
+
+# 富文本编辑器ckeditor配置
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',  # 工具条功能
+        'height': 300,  # 编辑器高度
+        # 'width': 300,  # 编辑器宽度
+    },
+}
+CKEDITOR_UPLOAD_PATH = ''  # 上传图片保存路径，使用了FastDFS，所以此处设为''
+
+# 生成index页面的路径
+GENERATE_STATIC_HTML_PATH = os.path.join(os.path.dirname(os.path.dirname(BASE_DIR)), 'front_end_pc')
+
+# CRONSLOG
+CRONS_LOG = os.path.join(os.path.dirname(BASE_DIR), 'logs/crons.log')
+
+# 定时任务
+CRONJOBS = [
+    # 每5分钟执行一次生成主页静态文件  执行函数的路径  生成日志的路径
+    ('*/1 * * * *', 'contents.crons.generate_static_index_html', '>> ' + CRONS_LOG)
+]
+
+# 解决crontab中文问题
+CRONTAB_COMMAND_PREFIX = 'LANG_ALL=zh_cn.UTF-8'
+
+
+# Haystack
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        # 端口号固定为9200
+        'URL': 'http://192.168.214.146:9200/',
+        # 指定elasticsearch建立的索引库的名称
+        'INDEX_NAME': 'meiduo_mall',
+    },
+}
+
+# 当添加、修改、删除数据时，自动生成索引
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'

@@ -18,6 +18,7 @@ class SMSCodeView(APIView):
             raise serializers.ValidationError("发送验证码过于频繁")
         # 生成随机验证码
         sms_code = random.randint(100000, 999999)
+        print(sms_code)
         # 保存短信验证码内容和时间标志
         # redis_cli.setex('SMS_CODE_'+mobile, constants.SMS_CODE_EXPIRES, sms_code)
         # redis_cli.setex('SMS_FLAG_'+mobile, constants.SMS_FLAG_EXPIRES, 1)
@@ -29,7 +30,7 @@ class SMSCodeView(APIView):
 
         # 发送短信
         # CCP.sendTemplateSMS(mobile, sms_code, constants.SMS_CODE_EXPIRES/60, 1)
-        send_sms_code.delay(mobile, sms_code, constants.SMS_CODE_EXPIRES/60, 1)
+        # send_sms_code.delay(mobile, sms_code, constants.SMS_CODE_EXPIRES/60, 1)
         # 响应
         return Response({"message": "OK"})
 
