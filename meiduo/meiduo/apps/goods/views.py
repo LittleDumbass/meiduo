@@ -4,6 +4,8 @@ from rest_framework.generics import ListAPIView
 from goods.models import SKU
 from goods.serializers import SKUSerializer
 from utils.pagination import SKUListPagination
+from drf_haystack.viewsets import HaystackViewSet
+from .serializers import SKUIndexSerializer
 
 
 class SKUListView(ListAPIView):
@@ -19,10 +21,6 @@ class SKUListView(ListAPIView):
     # 排序
     filter_backends = [OrderingFilter]
     order_fields = ['create_time', 'price', 'sales']
-
-
-from drf_haystack.viewsets import HaystackViewSet
-from .serializers import SKUIndexSerializer
 
 
 class SKUSearchViewSet(HaystackViewSet):
