@@ -1682,3 +1682,6 @@ INFO 2018-11-02 20:54:53,437 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
 INFO 2018-11-02 21:03:19,728 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
 WARNING 2018-11-02 21:03:20,861 base 152 Not Found: /browse_histories/
 WARNING 2018-11-02 21:03:20,922 basehttp 124 "POST /browse_histories/ HTTP/1.1" 404 8279
+INFO 2018-11-02 21:37:44,221 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-02 21:37:44,590 base 152 Not Found: /browse_histories/
+WARNING 2018-11-02 21:37:44,594 basehttp 124 "POST /browse_histories/ HTTP/1.1" 404 8279

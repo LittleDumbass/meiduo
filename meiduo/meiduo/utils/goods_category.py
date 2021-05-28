@@ -54,7 +54,7 @@ def get_goods_category():
             sub.sub_cats = sub.goodscategory_set.all()
             # 这里才是添加二级分类和与之对应的所有三级分类
             categories[channel.group_id]['sub_cats'].append(sub)
-    print(categories)
+    # print(categories)
 
     # 记得返回一个categories字典，不然函数没有返回值了
     return categories
