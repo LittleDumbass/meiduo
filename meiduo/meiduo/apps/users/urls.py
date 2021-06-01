@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^authorizations/$', obtain_jwt_token),
     url(r'^emails/verification/$', views.EmailActiveView.as_view()),
     url(r'^emails/$', views.EmailView.as_view()),
+    url(r'^browse_histories/$', views.HistoryListView.as_view()),
 ]
 
 router = DefaultRouter()

@@ -4,6 +4,7 @@ from rest_framework import serializers
 from rest_framework.response import Response
 from rest_framework_jwt.settings import api_settings
 from celery_tasks.email.tasks import send_verify_email
+from goods.models import SKU
 from users import constants
 
 from users.models import User, Address
@@ -162,3 +163,35 @@ class EmailActiveSerializer(serializers.Serializer):
         attrs['user_id'] = data_dict['user_id']
 
         return attrs
+
+
+class HistorySerializer(serializers.Serializer):
+    sku_id = serializers.IntegerField(min_value=1)
+
+    def validate_sku_id(self, value):
+        try:
+            SKU.objects.get(pk=value)
+        except:
+            raise serializers.ValidationError("该商品不存在")
+
+        return value
+
+    def create(self, validated_data):
+        sku_id = validated_data.get('sku_id')
+
+        # 根据当前登录用户的id为键存一个列表
+        # 连接redis
+        redis_cli = get_redis_connection('history')
+
+        key = 'history_%d' % self.context['request'].user.id
+        # 1.先删除同样的商品id
+        redis_cli.lrem(key, 0, sku_id)
+
+        # 2.把商品id从左边存进去
+        redis_cli.lpush(key, sku_id)
+
+        # 3.如果数量大于5个那就删除最右边的那个
+        if redis_cli.llen(key) > constants.BROWSE_HISTORY_LIMIT:
+            redis_cli.rpop(key)
+
+        return {'sku_id': sku_id}

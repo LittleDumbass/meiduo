@@ -7,10 +7,11 @@ from rest_framework.viewsets import ModelViewSet
 
 from users import constants
 from users.serializers import UserModelSerializer, UserDetailSerializer, EmailSerializer, EmailActiveSerializer, \
-    AddressSerializer
+    AddressSerializer, HistorySerializer
 from utils import tjws
 from .models import User, Address
 from rest_framework.response import Response
+
 
 
 class UsernameCountView(APIView):
@@ -134,3 +135,10 @@ class AddressViewSet(ModelViewSet):
         user.save()
 
         return Response({"message": "OK"})
+
+
+class HistoryListView(generics.ListCreateAPIView):
+    # 先创建浏览过商品的id列表
+    permission_classes = [IsAuthenticated]
+
+    serializer_class = HistorySerializer
