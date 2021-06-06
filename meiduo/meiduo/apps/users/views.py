@@ -1,3 +1,4 @@
+from django_redis import get_redis_connection
 from rest_framework import generics
 from rest_framework import serializers
 from rest_framework.decorators import action
@@ -5,6 +6,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 
+from goods.models import SKU
+from goods.serializers import SKUSerializer
 from users import constants
 from users.serializers import UserModelSerializer, UserDetailSerializer, EmailSerializer, EmailActiveSerializer, \
     AddressSerializer, HistorySerializer
@@ -141,4 +144,29 @@ class HistoryListView(generics.ListCreateAPIView):
     # 先创建浏览过商品的id列表
     permission_classes = [IsAuthenticated]
 
-    serializer_class = HistorySerializer
+    # serializer_class = HistorySerializer
+
+    def get_serializer_class(self):
+        if self.request.method == 'GET':
+            return SKUSerializer
+        else:
+            return HistorySerializer
+
+
+    def get_queryset(self):
+        # 连接redis
+        redis_cli = get_redis_connection('history')
+
+        # 取到当前登录用户的id
+        user = self.request.user
+        key = 'history_' + str(user.id)
+
+        # 取出当前用户对应的浏览列表
+        sku_ids = redis_cli.lrange(key, 0, -1)
+        skus = []
+        # 查出全部商品加到这个列表返回
+        for sku_id in sku_ids:
+            sku = SKU.objects.get(pk=sku_id)
+            skus.append(sku)
+
+        return skus

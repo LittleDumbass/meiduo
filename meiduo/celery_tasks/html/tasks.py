@@ -22,16 +22,18 @@ def generate_static_sku_detail_html(sku_id):
     sku = SKU.objects.get(id=sku_id)
     sku.images = sku.skuimage_set.all()
 
-    # 面包屑导航信息中的频道
+    # 面包屑导航信息中的频道    手机》手机通讯》手机   只查一级分类就可以了
     goods = sku.goods
     goods.channel = goods.category1.goodschannel_set.all()[0]
 
     # 构建当前商品的规格键
     # sku_key = [规格1参数id， 规格2参数id， 规格3参数id, ...]
-    sku_specs = sku.skuspecification_set.order_by('spec_id')
-    sku_key = []
-    for spec in sku_specs:
-        sku_key.append(spec.option.id)
+    # 所有规格加上参数id的列表
+    sku_specs = sku.skuspecification_set.order_by('spec_id')  # 这个表里面存的是具体规格选项的id
+    # <QuerySet [<SKUSpecification: 16: 华为 HUAWEI P10: 颜色 - 曜石黑>, <SKUSpecification: 16: 华为 HUAWEI P10: 版本 - 128GB>]>
+    sku_key = []  # 这里面放的是当前SKU每个规格的选项参数的id
+    for spec in sku_specs:  # 遍历每一个规格
+        sku_key.append(spec.option.id)  # option_id
 
     # 获取当前商品的所有SKU
     skus = goods.sku_set.all()
@@ -42,7 +44,8 @@ def generate_static_sku_detail_html(sku_id):
     #     (规格1参数id, 规格2参数id, 规格3参数id, ...): sku_id,
     #     ...
     # }
-    spec_sku_map = {}
+    spec_sku_map = {}  # 构建一个sku对应其所有规格参数id的列表
+    # 取出当前商品的每一个sku
     for s in skus:
         # 获取sku的规格参数
         s_specs = s.skuspecification_set.order_by('spec_id')
@@ -54,34 +57,55 @@ def generate_static_sku_detail_html(sku_id):
         spec_sku_map[tuple(key)] = s.id
 
     # 获取当前商品的规格信息
-    #specs = [
+    # specs = [
     #    {
     #        'name': '屏幕尺寸',
     #        'options': [
-    #            {'value': '13.3寸', 'sku_id': xxx},
-    #            {'value': '15.4寸', 'sku_id': xxx},
+    #            {1'value': '13.3寸', 'sku_id': xxx},
+    #            {2'value': '15.4寸', 'sku_id': xxx},
+    #            {3'value': '15.4寸', 'sku_id': xxx},
+    #            {4'value': '15.4寸', 'sku_id': xxx},
+    #            {5'value': '15.4寸', 'sku_id': xxx},
+    #            {6'value': '15.4寸', 'sku_id': xxx},
     #        ]
     #    },
     #    {
     #        'name': '颜色',
     #        'options': [
-    #            {'value': '银色', 'sku_id': xxx},
-    #            {'value': '黑色', 'sku_id': xxx}
+    #            {1'value': '银色', 'sku_id': xxx},
+    #            {2'value': '黑色', 'sku_id': xxx},
+    #            {3'value': '黑色', 'sku_id': xxx},
+    #            {4'value': '黑色', 'sku_id': xxx},
+    #            {5'value': '黑色', 'sku_id': xxx},
     #        ]
     #    },
     #    ...
-    #]
-    specs = goods.goodsspecification_set.order_by('id')
+    # ]
+    # 所有规格信息，只是规格，例如颜色，内存，尺寸这种
+    specs = goods.goodsspecification_set.order_by('id')  # 现在可以有两个规格，也可以有三个规格
     # 若当前sku的规格信息不完整，则不再继续
+
+    # 就是判断一下这个商品里面的所有规格是否和sku的规格参数的数量是否相同，
     if len(sku_key) < len(specs):
         return
+    # 遍历当前商品的每一个规格
     for index, spec in enumerate(specs):
         # 复制当前sku的规格键
-        key = sku_key[:]
+        key = sku_key[:]  # [规格选项的id,规格选项的id,...]
         # 该规格的选项
+
+        # 查询每一个规格所有的选项
         options = spec.specificationoption_set.all()
+        # 遍历每一个规格选项
         for option in options:
+            # spec_sku_map = {
+            #     (规格1参数id, 规格2参数id, 规格3参数id, ...): sku_id,
+            #     (规格1参数id, 规格2参数id, 规格3参数id, ...): sku_id,
+            #     ...
+            # }
+
             # 在规格参数sku字典中查找符合当前规格的sku
+            # key = [规格选项的id,规格选项的id,...]
             key[index] = option.id
             option.sku_id = spec_sku_map.get(tuple(key))
 
@@ -99,7 +123,7 @@ def generate_static_sku_detail_html(sku_id):
     response = render(None, 'detail.html', context=context)
     # html_text = template.render(context)
     html_str = response.content.decode()
-    file_path = os.path.join(settings.GENERATE_STATIC_HTML_PATH, 'goods/'+str(sku_id)+'.html')
+    file_path = os.path.join(settings.GENERATE_STATIC_HTML_PATH, 'goods/' + str(sku_id) + '.html')
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(html_str)
 

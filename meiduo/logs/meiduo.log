@@ -1987,3 +1987,777 @@ AttributeError: Got AttributeError when attempting to get a value for field `sku
 The serializer field might be named incorrectly and not match any attribute or key on the `int` instance.
 Original exception text was: 'int' object has no attribute 'sku_id'.
 ERROR 2018-11-02 22:15:48,326 basehttp 124 "POST /browse_histories/ HTTP/1.1" 500 21759
+INFO 2018-11-02 22:47:30,608 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-11-02 22:47:30,958 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+INFO 2018-11-02 22:47:37,018 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-02 22:47:37,130 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-11-02 22:47:38,024 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-02 22:47:38,124 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+ERROR 2018-11-02 22:47:38,199 exception 135 Internal Server Error: /browse_histories/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/generics.py", line 241, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/mixins.py", line 40, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/users/views.py", line 162, in get_queryset
+    key = 'history_' + user.id
+TypeError: Can't convert 'int' object to str implicitly
+ERROR 2018-11-02 22:47:38,375 basehttp 124 "GET /browse_histories/ HTTP/1.1" 500 20179
+INFO 2018-11-02 22:48:39,269 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-02 22:48:39,628 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1103
+INFO 2018-11-03 08:51:24,005 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 08:51:24,503 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-11-03 08:57:58,236 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 09:03:53,905 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 09:03:54,276 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-11-03 09:04:35,157 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-11-03 09:04:44,457 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 09:05:05,589 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-11-03 09:05:06,055 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+INFO 2018-11-03 09:05:16,190 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-03 09:05:16,551 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-11-03 09:05:17,289 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-03 09:05:17,626 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1103
+INFO 2018-11-03 09:05:32,386 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:05:35,892 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-03 09:05:36,124 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1103
+INFO 2018-11-03 09:06:22,597 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:06:28,090 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-03 09:06:28,345 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1103
+INFO 2018-11-03 09:09:26,008 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 12
+INFO 2018-11-03 09:10:01,831 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 12
+INFO 2018-11-03 09:12:03,526 basehttp 124 "GET /skus/search/?text=Apple&page=1&page_size=6 HTTP/1.1" 200 52
+INFO 2018-11-03 09:12:54,332 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA&page=1&page_size=6 HTTP/1.1" 200 52
+INFO 2018-11-03 09:14:28,979 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA&page=1&page_size=6 HTTP/1.1" 200 52
+INFO 2018-11-03 09:14:34,258 basehttp 124 "GET /skus/search/?text=Apple&page=1&page_size=6 HTTP/1.1" 200 52
+INFO 2018-11-03 09:17:19,889 basehttp 124 "GET /skus/search/?text=%E5%8D%8E%E4%B8%BA&page=1&page_size=6 HTTP/1.1" 200 2551
+INFO 2018-11-03 09:17:33,358 basehttp 124 "GET /skus/search/?text=Apple&page=1&page_size=6 HTTP/1.1" 200 2494
+INFO 2018-11-03 09:17:46,757 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-03 09:17:47,331 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:18:36,023 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:28:50,415 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-03 09:28:50,829 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-03 09:28:50,866 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-03 09:28:50,925 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1067
+INFO 2018-11-03 09:29:09,143 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:31:18,529 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-03 09:31:18,769 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1067
+INFO 2018-11-03 09:31:28,740 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:35:32,633 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-03 09:35:33,001 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+WARNING 2018-11-03 09:35:33,016 base 152 Not Found: /categories/115/
+WARNING 2018-11-03 09:35:33,045 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8439
+WARNING 2018-11-03 09:35:33,098 base 152 Not Found: /cart/
+WARNING 2018-11-03 09:35:33,114 basehttp 124 "GET /cart/ HTTP/1.1" 404 8409
+INFO 2018-11-03 09:41:56,672 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-03 09:41:57,019 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:41:59,984 basehttp 124 "GET /admin/ HTTP/1.1" 200 8507
+WARNING 2018-11-03 09:42:00,576 base 152 Not Found: /favicon.ico
+WARNING 2018-11-03 09:42:00,593 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 8427
+INFO 2018-11-03 09:42:06,326 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 09:42:06,510 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:42:09,874 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34065
+INFO 2018-11-03 09:42:10,131 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:42:50,890 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 09:42:51,246 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 09:42:51,516 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:42:53,948 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:44:32,019 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34067
+INFO 2018-11-03 09:44:32,280 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:44:36,486 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 09:44:36,826 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 09:44:37,048 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:44:38,799 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:45:41,498 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34065
+INFO 2018-11-03 09:45:41,678 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:46:05,751 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 09:46:06,280 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 09:46:06,477 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:46:08,734 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:49:42,096 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34068
+INFO 2018-11-03 09:49:42,288 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:49:47,728 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 09:49:48,120 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 09:49:48,594 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:49:51,276 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 09:50:48,928 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34065
+INFO 2018-11-03 09:50:49,068 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:50:55,971 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 09:50:56,303 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 09:50:56,444 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 09:50:58,528 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 10:12:41,363 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-03 10:12:41,912 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 10:27:14,371 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34068
+INFO 2018-11-03 10:27:14,909 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:27:24,010 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 10:27:24,456 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 10:27:24,653 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:27:29,149 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-03 10:27:29,521 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 10:35:40,700 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 10:35:53,271 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 10:36:03,900 basehttp 124 "GET /skus/search/?text=%E6%89%8B%E6%9C%BA&page=1&page_size=6 HTTP/1.1" 200 2545
+INFO 2018-11-03 10:36:31,205 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 10:42:16,761 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34065
+INFO 2018-11-03 10:42:17,164 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:42:22,999 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 10:42:23,439 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 10:42:23,822 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:42:28,143 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-03 10:42:28,487 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 10:42:37,436 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34068
+INFO 2018-11-03 10:42:37,531 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:42:41,830 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 10:42:42,175 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 10:42:42,418 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 10:42:46,114 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-03 11:29:46,327 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 11:29:46,776 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-11-03 11:29:56,346 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 12:00:45,889 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34065
+INFO 2018-11-03 12:00:46,564 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+ERROR 2018-11-03 12:00:55,594 exception 135 Internal Server Error: /admin/goods/sku/16/change/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 95, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/retry.py", line 343, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7ff1510b20f0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1511, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1448, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/goods/admin.py", line 8, in save_model
+    super().save_model(request, obj, form, change)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 979, in save_model
+    obj.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 848, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/signals.py", line 52, in handle_save
+    index.update_object(instance, using=using)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/indexes.py", line 284, in update_object
+    backend.update(self, [instance])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/backends/elasticsearch_backend.py", line 190, in update
+    bulk(self.conn, prepped_docs, index=self.index_name, doc_type='modelresult')
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 190, in bulk
+    for ok, item in streaming_bulk(client, actions, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 162, in streaming_bulk
+    for result in _process_bulk_chunk(client, bulk_actions, raise_on_exception, raise_on_error, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 91, in _process_bulk_chunk
+    raise e
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 87, in _process_bulk_chunk
+    resp = client.bulk('\n'.join(bulk_actions) + '\n', **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/utils.py", line 69, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/__init__.py", line 785, in bulk
+    doc_type, '_bulk'), params=params, body=self._bulk_body(body))
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/transport.py", line 327, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 106, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7ff1510b20f0>: Failed to establish a new connection: [Errno 101] Network is unreachable) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7ff1510b20f0>: Failed to establish a new connection: [Errno 101] Network is unreachable)
+ERROR 2018-11-03 12:00:56,190 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 500 301002
+INFO 2018-11-03 12:01:54,197 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 12:01:54,671 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 12:01:54,944 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:54,945 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:54,955 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:54,955 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:54,965 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:54,971 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:54,983 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:54,993 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:55,001 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:55,078 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:55,088 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:55,287 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 12:01:55,818 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:55,826 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:55,836 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:55,855 basehttp 124 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2018-11-03 12:01:55,864 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 12:02:01,685 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 12:02:02,007 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 12:03:03,532 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 12:03:03,832 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:03,836 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:03,837 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:03,842 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:03,911 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:03,913 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:03,913 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 12:03:03,920 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:03,938 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:03,962 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:03,996 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:04,007 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:04,428 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:04,444 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:04,446 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:04,454 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 12:03:06,333 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34068
+INFO 2018-11-03 12:03:06,576 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 12:03:13,378 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 12:03:13,797 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 12:03:13,996 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+WARNING 2018-11-03 12:03:18,275 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 12:06:24,157 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 12:06:24,314 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:24,320 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:24,349 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 12:06:24,368 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:24,453 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:24,459 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:24,462 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:24,496 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:24,506 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:24,572 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:24,649 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:24,652 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:25,023 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:25,031 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:25,037 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:25,039 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 12:06:26,783 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34065
+INFO 2018-11-03 12:06:27,056 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 12:06:32,847 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 12:06:33,263 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 12:06:33,523 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+WARNING 2018-11-03 12:06:37,359 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 14:50:56,653 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 14:50:57,259 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:57,267 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:57,374 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:57,380 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 14:50:57,406 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:57,416 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:57,420 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:57,442 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:57,596 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:57,601 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:57,628 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:57,635 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:58,096 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:58,100 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:58,102 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:50:58,109 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 14:51:00,757 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34066
+INFO 2018-11-03 14:51:00,973 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+ERROR 2018-11-03 14:51:04,508 exception 135 Internal Server Error: /admin/goods/sku/16/change/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 95, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/retry.py", line 343, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f56d94c3ac8>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1511, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1448, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/goods/admin.py", line 8, in save_model
+    super().save_model(request, obj, form, change)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 979, in save_model
+    obj.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 848, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/signals.py", line 52, in handle_save
+    index.update_object(instance, using=using)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/indexes.py", line 284, in update_object
+    backend.update(self, [instance])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/backends/elasticsearch_backend.py", line 190, in update
+    bulk(self.conn, prepped_docs, index=self.index_name, doc_type='modelresult')
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 190, in bulk
+    for ok, item in streaming_bulk(client, actions, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 162, in streaming_bulk
+    for result in _process_bulk_chunk(client, bulk_actions, raise_on_exception, raise_on_error, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 91, in _process_bulk_chunk
+    raise e
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 87, in _process_bulk_chunk
+    resp = client.bulk('\n'.join(bulk_actions) + '\n', **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/utils.py", line 69, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/__init__.py", line 785, in bulk
+    doc_type, '_bulk'), params=params, body=self._bulk_body(body))
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/transport.py", line 327, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 106, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f56d94c3ac8>: Failed to establish a new connection: [Errno 101] Network is unreachable) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f56d94c3ac8>: Failed to establish a new connection: [Errno 101] Network is unreachable)
+ERROR 2018-11-03 14:51:04,881 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 500 300926
+ERROR 2018-11-03 14:51:24,518 exception 135 Internal Server Error: /admin/goods/sku/16/change/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 95, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/retry.py", line 343, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd32f74ee10>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1511, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1448, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/goods/admin.py", line 8, in save_model
+    super().save_model(request, obj, form, change)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 979, in save_model
+    obj.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 848, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/signals.py", line 52, in handle_save
+    index.update_object(instance, using=using)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/indexes.py", line 284, in update_object
+    backend.update(self, [instance])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/backends/elasticsearch_backend.py", line 190, in update
+    bulk(self.conn, prepped_docs, index=self.index_name, doc_type='modelresult')
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 190, in bulk
+    for ok, item in streaming_bulk(client, actions, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 162, in streaming_bulk
+    for result in _process_bulk_chunk(client, bulk_actions, raise_on_exception, raise_on_error, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 91, in _process_bulk_chunk
+    raise e
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 87, in _process_bulk_chunk
+    resp = client.bulk('\n'.join(bulk_actions) + '\n', **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/utils.py", line 69, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/__init__.py", line 785, in bulk
+    doc_type, '_bulk'), params=params, body=self._bulk_body(body))
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/transport.py", line 327, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 106, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd32f74ee10>: Failed to establish a new connection: [Errno 101] Network is unreachable) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd32f74ee10>: Failed to establish a new connection: [Errno 101] Network is unreachable)
+ERROR 2018-11-03 14:51:25,012 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 500 300922
+INFO 2018-11-03 14:51:41,330 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34066
+INFO 2018-11-03 14:51:42,095 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 14:51:44,670 basehttp 124 "GET /admin/logout/ HTTP/1.1" 200 1011
+INFO 2018-11-03 14:51:46,424 basehttp 124 "GET /admin/ HTTP/1.1" 302 0
+INFO 2018-11-03 14:51:46,609 basehttp 124 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1652
+INFO 2018-11-03 14:51:51,404 basehttp 124 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2018-11-03 14:51:51,698 basehttp 124 "GET /admin/ HTTP/1.1" 200 10572
+INFO 2018-11-03 14:51:54,263 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 14:51:54,435 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 14:51:56,919 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34066
+INFO 2018-11-03 14:51:57,211 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+ERROR 2018-11-03 14:52:00,757 exception 135 Internal Server Error: /admin/goods/sku/16/change/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 95, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/retry.py", line 343, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fd32f590ef0>: Failed to establish a new connection: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1511, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1448, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/goods/admin.py", line 8, in save_model
+    super().save_model(request, obj, form, change)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 979, in save_model
+    obj.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 848, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/signals.py", line 52, in handle_save
+    index.update_object(instance, using=using)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/indexes.py", line 284, in update_object
+    backend.update(self, [instance])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/backends/elasticsearch_backend.py", line 190, in update
+    bulk(self.conn, prepped_docs, index=self.index_name, doc_type='modelresult')
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 190, in bulk
+    for ok, item in streaming_bulk(client, actions, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 162, in streaming_bulk
+    for result in _process_bulk_chunk(client, bulk_actions, raise_on_exception, raise_on_error, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 91, in _process_bulk_chunk
+    raise e
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 87, in _process_bulk_chunk
+    resp = client.bulk('\n'.join(bulk_actions) + '\n', **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/utils.py", line 69, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/__init__.py", line 785, in bulk
+    doc_type, '_bulk'), params=params, body=self._bulk_body(body))
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/transport.py", line 327, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 106, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd32f590ef0>: Failed to establish a new connection: [Errno 101] Network is unreachable) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7fd32f590ef0>: Failed to establish a new connection: [Errno 101] Network is unreachable)
+ERROR 2018-11-03 14:52:01,007 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 500 300920
+INFO 2018-11-03 14:52:50,586 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 14:52:51,364 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 14:52:51,920 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:51,940 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:51,948 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,030 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,031 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,107 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,109 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 14:52:52,112 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,149 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,178 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,234 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,237 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,706 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,709 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,715 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,742 basehttp 124 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2018-11-03 14:52:52,761 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 14:53:02,854 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 14:53:03,985 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 14:54:55,629 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 14:54:56,199 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,210 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,227 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,237 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,245 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,253 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,261 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,263 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,267 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 14:54:56,289 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,292 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,311 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,891 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,897 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,923 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:56,926 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 14:54:59,382 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34067
+INFO 2018-11-03 14:54:59,564 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 14:55:06,514 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 14:55:07,341 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 14:55:07,587 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 14:59:22,692 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 14:59:23,414 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:23,429 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:23,508 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:23,511 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:23,512 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:23,591 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:23,592 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:23,593 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:23,666 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 14:59:23,683 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:23,713 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:23,750 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:24,136 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:24,148 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:24,179 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:24,195 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 14:59:25,754 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34068
+INFO 2018-11-03 14:59:26,026 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 14:59:33,955 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 14:59:34,345 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 14:59:34,540 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+WARNING 2018-11-03 14:59:41,398 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 15:04:47,240 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 15:04:47,555 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:47,555 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:47,671 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 15:04:47,697 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:47,698 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:47,707 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:47,735 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:47,738 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:47,755 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:47,786 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:47,788 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:47,839 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:48,367 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:48,373 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:48,393 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:48,400 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 15:04:50,058 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34065
+INFO 2018-11-03 15:04:50,256 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 15:04:57,040 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 15:04:57,465 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 15:04:57,667 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 15:05:05,253 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 15:05:05,955 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 15:28:43,775 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 15:28:44,056 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+WARNING 2018-11-03 15:28:50,094 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 18:45:04,804 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34066
+INFO 2018-11-03 18:45:05,583 basehttp 124 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2018-11-03 18:45:05,585 basehttp 124 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2018-11-03 18:45:05,586 basehttp 124 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2018-11-03 18:45:05,591 basehttp 124 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2018-11-03 18:45:05,618 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 18:45:05,650 basehttp 124 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2018-11-03 18:45:05,702 basehttp 124 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2018-11-03 18:45:05,739 basehttp 124 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2018-11-03 18:45:15,307 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 18:45:16,807 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 18:45:17,129 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 18:45:24,203 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 18:45:24,716 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
