@@ -2761,3 +2761,988 @@ INFO 2018-11-03 18:45:16,807 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8
 INFO 2018-11-03 18:45:17,129 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
 INFO 2018-11-03 18:45:24,203 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
 WARNING 2018-11-03 18:45:24,716 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 19:28:33,724 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 19:28:34,469 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,496 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,511 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,517 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,525 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,535 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,544 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,565 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,611 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,630 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,630 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:34,657 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 19:28:35,409 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:35,424 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:35,466 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:35,470 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 19:28:38,246 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34067
+INFO 2018-11-03 19:28:38,458 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 19:28:45,386 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 19:28:46,350 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 19:28:46,938 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 19:28:56,891 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 19:28:57,561 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 19:30:24,726 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 19:30:25,243 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,252 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,253 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,287 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,303 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,337 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,347 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,397 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,415 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,417 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,469 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,696 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 19:30:25,963 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,969 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,985 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:25,990 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 19:30:28,063 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34068
+INFO 2018-11-03 19:30:28,203 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 19:30:35,436 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 19:30:35,778 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 19:30:36,290 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+WARNING 2018-11-03 19:30:40,003 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 19:32:46,998 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 19:32:47,234 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,280 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,362 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,373 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,403 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,414 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,422 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,441 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,459 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,465 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,504 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,509 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 19:32:47,766 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,771 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,792 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:47,798 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 19:32:49,455 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34065
+INFO 2018-11-03 19:32:49,565 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 19:32:55,591 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 19:32:55,996 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 19:32:56,419 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 19:33:41,761 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 19:33:42,128 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,149 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,260 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,279 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,293 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,306 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,324 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,363 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,389 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,395 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,399 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,401 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 19:33:42,819 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,819 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,850 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:42,855 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 19:33:44,819 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34068
+INFO 2018-11-03 19:33:45,079 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 19:33:49,156 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 19:33:49,653 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 19:33:49,884 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+WARNING 2018-11-03 19:33:55,922 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 20:15:36,652 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-03 20:15:37,238 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:37,239 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:37,294 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:37,295 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:37,298 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:37,320 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 20:15:37,349 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:37,415 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:37,462 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:37,485 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:37,490 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:37,506 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:38,200 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:38,205 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:38,211 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:38,213 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-03 20:15:41,067 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34069
+INFO 2018-11-03 20:15:41,524 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 20:21:51,714 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-03 20:21:52,398 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-03 20:21:52,634 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-03 20:22:00,378 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 20:22:00,787 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-03 21:54:47,313 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-03 21:54:48,014 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-03 21:54:48,466 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-04 08:38:06,406 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-11-04 08:39:08,819 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1082
+INFO 2018-11-04 09:36:16,205 basehttp 124 "GET /admin/ HTTP/1.1" 200 10572
+INFO 2018-11-04 09:36:16,241 basehttp 124 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+WARNING 2018-11-04 09:36:16,868 base 152 Not Found: /favicon.ico
+WARNING 2018-11-04 09:36:16,871 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 8427
+INFO 2018-11-04 09:36:19,002 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8510
+INFO 2018-11-04 09:36:19,118 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-04 09:36:20,999 basehttp 124 "GET /admin/goods/sku/16/change/ HTTP/1.1" 200 34069
+INFO 2018-11-04 09:36:21,193 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+ERROR 2018-11-04 09:36:27,094 exception 135 Internal Server Error: /admin/goods/sku/16/change/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 95, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/retry.py", line 343, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7efc04a02e10>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1511, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1448, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/goods/admin.py", line 8, in save_model
+    super().save_model(request, obj, form, change)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 979, in save_model
+    obj.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 848, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/signals.py", line 52, in handle_save
+    index.update_object(instance, using=using)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/indexes.py", line 284, in update_object
+    backend.update(self, [instance])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/backends/elasticsearch_backend.py", line 190, in update
+    bulk(self.conn, prepped_docs, index=self.index_name, doc_type='modelresult')
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 190, in bulk
+    for ok, item in streaming_bulk(client, actions, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 162, in streaming_bulk
+    for result in _process_bulk_chunk(client, bulk_actions, raise_on_exception, raise_on_error, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 91, in _process_bulk_chunk
+    raise e
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 87, in _process_bulk_chunk
+    resp = client.bulk('\n'.join(bulk_actions) + '\n', **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/utils.py", line 69, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/__init__.py", line 785, in bulk
+    doc_type, '_bulk'), params=params, body=self._bulk_body(body))
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/transport.py", line 327, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 106, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7efc04a02e10>: Failed to establish a new connection: [Errno 111] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7efc04a02e10>: Failed to establish a new connection: [Errno 111] Connection refused)
+ERROR 2018-11-04 09:36:27,720 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 500 301073
+ERROR 2018-11-04 09:36:41,315 exception 135 Internal Server Error: /admin/goods/sku/16/change/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 95, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/retry.py", line 343, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f40f841c9b0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1511, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1448, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/goods/admin.py", line 8, in save_model
+    super().save_model(request, obj, form, change)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 979, in save_model
+    obj.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 848, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/signals.py", line 52, in handle_save
+    index.update_object(instance, using=using)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/indexes.py", line 284, in update_object
+    backend.update(self, [instance])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/backends/elasticsearch_backend.py", line 190, in update
+    bulk(self.conn, prepped_docs, index=self.index_name, doc_type='modelresult')
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 190, in bulk
+    for ok, item in streaming_bulk(client, actions, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 162, in streaming_bulk
+    for result in _process_bulk_chunk(client, bulk_actions, raise_on_exception, raise_on_error, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 91, in _process_bulk_chunk
+    raise e
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 87, in _process_bulk_chunk
+    resp = client.bulk('\n'.join(bulk_actions) + '\n', **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/utils.py", line 69, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/__init__.py", line 785, in bulk
+    doc_type, '_bulk'), params=params, body=self._bulk_body(body))
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/transport.py", line 327, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 106, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f40f841c9b0>: Failed to establish a new connection: [Errno 111] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f40f841c9b0>: Failed to establish a new connection: [Errno 111] Connection refused)
+ERROR 2018-11-04 09:36:41,820 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 500 301133
+ERROR 2018-11-04 09:37:05,899 exception 135 Internal Server Error: /admin/goods/sku/16/change/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 95, in perform_request
+    response = self.pool.urlopen(method, url, body, retries=False, headers=self.headers, **kw)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/util/retry.py", line 343, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/packages/six.py", line 686, in reraise
+    raise value
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 934, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.5/http/client.py", line 877, in send
+    self.connect()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 181, in connect
+    conn = self._new_conn()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f40f8325e80>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 551, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 224, in inner
+    return view(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1511, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1408, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1448, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/goods/admin.py", line 8, in save_model
+    super().save_model(request, obj, form, change)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/contrib/admin/options.py", line 979, in save_model
+    obj.save()
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 808, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/db/models/base.py", line 848, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/signals.py", line 52, in handle_save
+    index.update_object(instance, using=using)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/indexes.py", line 284, in update_object
+    backend.update(self, [instance])
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/haystack/backends/elasticsearch_backend.py", line 190, in update
+    bulk(self.conn, prepped_docs, index=self.index_name, doc_type='modelresult')
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 190, in bulk
+    for ok, item in streaming_bulk(client, actions, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 162, in streaming_bulk
+    for result in _process_bulk_chunk(client, bulk_actions, raise_on_exception, raise_on_error, **kwargs):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 91, in _process_bulk_chunk
+    raise e
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/helpers/__init__.py", line 87, in _process_bulk_chunk
+    resp = client.bulk('\n'.join(bulk_actions) + '\n', **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/utils.py", line 69, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/client/__init__.py", line 785, in bulk
+    doc_type, '_bulk'), params=params, body=self._bulk_body(body))
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/transport.py", line 327, in perform_request
+    status, headers, data = connection.perform_request(method, url, params, body, ignore=ignore, timeout=timeout)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/elasticsearch/connection/http_urllib3.py", line 106, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x7f40f8325e80>: Failed to establish a new connection: [Errno 111] Connection refused) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x7f40f8325e80>: Failed to establish a new connection: [Errno 111] Connection refused)
+ERROR 2018-11-04 09:37:06,476 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 500 301133
+INFO 2018-11-04 09:41:30,224 basehttp 124 "POST /admin/goods/sku/16/change/ HTTP/1.1" 302 0
+INFO 2018-11-04 09:41:31,469 basehttp 124 "GET /admin/goods/sku/ HTTP/1.1" 200 8691
+INFO 2018-11-04 09:41:32,190 basehttp 124 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:32,196 basehttp 124 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:32,200 basehttp 124 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:32,202 basehttp 124 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:32,251 basehttp 124 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:32,291 basehttp 124 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:32,292 basehttp 124 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:32,302 basehttp 124 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:32,308 basehttp 124 "GET /admin/jsi18n/ HTTP/1.1" 200 7682
+INFO 2018-11-04 09:41:32,320 basehttp 124 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:32,338 basehttp 124 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:32,340 basehttp 124 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:33,267 basehttp 124 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:33,273 basehttp 124 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:33,305 basehttp 124 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:33,310 basehttp 124 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2018-11-04 09:41:33,312 basehttp 124 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2018-11-04 11:33:03,767 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-11-04 11:33:04,020 basehttp 124 "GET /user/ HTTP/1.1" 401 35
+INFO 2018-11-04 11:33:11,332 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-04 11:33:11,702 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-11-04 11:33:12,454 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-04 11:33:12,476 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-04 11:33:12,574 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1082
+INFO 2018-11-04 11:33:20,310 basehttp 124 "GET /user/ HTTP/1.1" 200 103
+INFO 2018-11-04 11:33:20,639 basehttp 124 "GET /browse_histories/ HTTP/1.1" 200 1082
+INFO 2018-11-04 19:53:51,084 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-04 19:53:51,132 base 152 Not Found: /cart/
+WARNING 2018-11-04 19:53:51,133 basehttp 124 "GET /cart/ HTTP/1.1" 404 8409
+INFO 2018-11-04 20:18:26,565 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-11-04 20:18:26,588 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/request.py", line 411, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'COOKIE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/views.py", line 18, in post
+    cart_str = request.COOKIE.get('cart')
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/request.py", line 413, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'COOKIE'
+ERROR 2018-11-04 20:18:26,700 basehttp 124 "POST /cart/ HTTP/1.1" 500 20558
+ERROR 2018-11-04 20:18:30,371 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/request.py", line 411, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'COOKIE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/views.py", line 18, in post
+    cart_str = request.COOKIE.get('cart')
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/request.py", line 413, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'COOKIE'
+ERROR 2018-11-04 20:18:30,400 basehttp 124 "POST /cart/ HTTP/1.1" 500 20558
+INFO 2018-11-04 20:19:21,979 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-11-04 20:19:22,003 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/views.py", line 20, in post
+    cart_dict = myjson.loads(cart_str)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/utils/myjson.py", line 22, in loads
+    byte_str64 = mystr.encode()
+AttributeError: 'NoneType' object has no attribute 'encode'
+ERROR 2018-11-04 20:19:22,208 basehttp 124 "POST /cart/ HTTP/1.1" 500 20183
+ERROR 2018-11-04 20:22:07,184 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/views.py", line 20, in post
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 434, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 490, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/serializers.py", line 13, in validate_sku_id
+    count = SKU.objects.get(pk=value).count()
+AttributeError: 'SKU' object has no attribute 'count'
+ERROR 2018-11-04 20:22:07,254 basehttp 124 "POST /cart/ HTTP/1.1" 500 20812
+INFO 2018-11-04 20:23:36,743 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 20:23:43,267 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 20:23:43,312 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 20:23:49,099 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 20:38:37,461 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-11-04 20:38:37,976 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/views.py", line 72, in get
+    for key, value in cart_dict.item():
+AttributeError: 'dict' object has no attribute 'item'
+ERROR 2018-11-04 20:38:38,637 basehttp 124 "GET /cart/ HTTP/1.1" 500 20184
+ERROR 2018-11-04 20:38:42,434 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/views.py", line 72, in get
+    for key, value in cart_dict.item():
+AttributeError: 'dict' object has no attribute 'item'
+ERROR 2018-11-04 20:38:42,500 basehttp 124 "GET /cart/ HTTP/1.1" 500 20217
+INFO 2018-11-04 20:39:03,816 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-11-04 20:39:04,395 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'SKU' object has no attribute 'sku_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/views.py", line 79, in get
+    return Response(serializer.data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 514, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `sku_id` on serializer `CartAddSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `SKU` instance.
+Original exception text was: 'SKU' object has no attribute 'sku_id'.
+ERROR 2018-11-04 20:39:04,470 basehttp 124 "GET /cart/ HTTP/1.1" 500 22292
+ERROR 2018-11-04 20:39:07,292 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/fields.py", line 441, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/fields.py", line 100, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'SKU' object has no attribute 'sku_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/views.py", line 79, in get
+    return Response(serializer.data)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 765, in data
+    ret = super(ListSerializer, self).data
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 683, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 683, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/serializers.py", line 514, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/fields.py", line 462, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `sku_id` on serializer `CartAddSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `SKU` instance.
+Original exception text was: 'SKU' object has no attribute 'sku_id'.
+ERROR 2018-11-04 20:39:07,420 basehttp 124 "GET /cart/ HTTP/1.1" 500 22325
+INFO 2018-11-04 20:40:46,400 basehttp 124 "GET /cart/ HTTP/1.1" 200 186
+INFO 2018-11-04 20:47:41,617 basehttp 124 "GET /cart/ HTTP/1.1" 200 186
+INFO 2018-11-04 20:50:02,988 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 20:50:03,029 basehttp 124 "POST /cart/ HTTP/1.1" 200 23
+INFO 2018-11-04 20:50:05,970 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 20:50:06,103 basehttp 124 "GET /cart/ HTTP/1.1" 200 435
+INFO 2018-11-04 20:50:11,098 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 20:50:11,116 basehttp 124 "POST /cart/ HTTP/1.1" 200 23
+INFO 2018-11-04 20:50:13,211 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+WARNING 2018-11-04 20:50:19,068 basehttp 124 "PUT /cart/ HTTP/1.1" 405 45
+WARNING 2018-11-04 20:50:22,835 basehttp 124 "PUT /cart/ HTTP/1.1" 405 45
+INFO 2018-11-04 20:50:24,593 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 20:52:42,396 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:05:43,532 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:05:43,732 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+ERROR 2018-11-04 21:05:46,193 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/views.py", line 102, in put
+    sku_id= serializer.validated_data('sku_id')
+TypeError: 'collections.OrderedDict' object is not callable
+ERROR 2018-11-04 21:05:46,258 basehttp 124 "PUT /cart/ HTTP/1.1" 500 20423
+ERROR 2018-11-04 21:05:49,995 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/MyProject/meiduo/meiduo/apps/carts/views.py", line 102, in put
+    sku_id= serializer.validated_data('sku_id')
+TypeError: 'collections.OrderedDict' object is not callable
+ERROR 2018-11-04 21:05:50,012 basehttp 124 "PUT /cart/ HTTP/1.1" 500 20423
+INFO 2018-11-04 21:07:53,173 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:07:54,620 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:07:55,459 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:07:56,799 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:07:58,243 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:07:58,682 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:07:59,423 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:08:00,320 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:08:00,669 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:08:01,375 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:08:06,613 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:08:07,714 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:08:07,995 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:08:08,731 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:17:50,719 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:17:50,909 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:17:52,473 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-11-04 21:17:53,925 basehttp 124 "GET /cart/ HTTP/1.1" 200 500
+INFO 2018-11-04 21:17:56,310 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-11-04 21:17:57,210 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-04 21:34:13,694 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:34:13,859 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-04 21:34:15,558 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-04 21:34:19,731 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:34:19,758 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:34:24,378 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:34:24,401 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:34:26,835 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:34:28,887 basehttp 124 "OPTIONS /cart/selection/ HTTP/1.1" 200 0
+WARNING 2018-11-04 21:34:28,899 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 405 45
+WARNING 2018-11-04 21:34:31,360 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 405 45
+WARNING 2018-11-04 21:34:31,875 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 405 45
+WARNING 2018-11-04 21:34:32,370 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 405 45
+WARNING 2018-11-04 21:34:32,949 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 405 45
+WARNING 2018-11-04 21:34:33,506 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 405 45
+WARNING 2018-11-04 21:34:34,097 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 405 45
+INFO 2018-11-04 21:36:00,602 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+WARNING 2018-11-04 21:36:02,823 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 405 45
+INFO 2018-11-04 21:36:33,399 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:36:35,796 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 18
+INFO 2018-11-04 21:36:43,663 basehttp 124 "GET /cart/ HTTP/1.1" 200 688
+INFO 2018-11-04 21:36:47,804 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 17
+INFO 2018-11-04 21:36:48,621 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:36:50,438 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 21:51:29,048 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2018-11-04 21:51:29,084 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+INFO 2018-11-04 21:51:33,226 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 240
+INFO 2018-11-04 21:51:41,251 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:51:41,595 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-04 21:51:45,381 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:51:45,711 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-04 21:51:49,218 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:51:49,500 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-04 21:51:59,188 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:51:59,217 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:52:02,201 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-04 21:52:03,090 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:52:03,125 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 21:52:06,569 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-04 21:52:07,250 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 21:52:07,274 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 22:01:32,559 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+ERROR 2018-11-04 22:01:32,694 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-11-04 22:01:32,820 basehttp 124 "GET /cart/ HTTP/1.1" 500 92716
+ERROR 2018-11-04 22:01:35,405 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-11-04 22:01:35,669 basehttp 124 "GET /cart/ HTTP/1.1" 500 92851
+ERROR 2018-11-04 22:01:36,553 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-11-04 22:01:36,704 basehttp 124 "GET /cart/ HTTP/1.1" 500 92851
+ERROR 2018-11-04 22:01:37,236 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-11-04 22:01:37,400 basehttp 124 "GET /cart/ HTTP/1.1" 500 92851
+ERROR 2018-11-04 22:01:38,578 exception 135 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 485, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/python/.virtualenvs/mydjango_py3_1.11/lib/python3.5/site-packages/rest_framework/views.py", line 400, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2018-11-04 22:01:38,746 basehttp 124 "GET /cart/ HTTP/1.1" 500 92851
+INFO 2018-11-04 22:38:36,158 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 22:38:36,389 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 22:50:38,053 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 22:50:38,252 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 22:50:41,041 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 22:50:42,160 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 22:50:45,123 basehttp 124 "PUT /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 22:50:45,998 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 22:53:15,990 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 22:53:17,220 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-04 22:53:18,255 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-11-04 22:53:19,511 basehttp 124 "GET /cart/ HTTP/1.1" 200 500
+INFO 2018-11-04 22:53:20,833 basehttp 124 "GET /cart/ HTTP/1.1" 200 500
+INFO 2018-11-04 22:53:22,668 basehttp 124 "DELETE /cart/ HTTP/1.1" 204 0
+INFO 2018-11-04 22:53:23,880 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-04 22:58:18,931 basehttp 124 "GET /cart/ HTTP/1.1" 200 251
+INFO 2018-11-04 22:58:23,190 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+INFO 2018-11-04 22:58:23,494 basehttp 124 "POST /browse_histories/ HTTP/1.1" 201 13
+INFO 2018-11-04 22:58:24,754 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+INFO 2018-11-04 22:58:24,793 basehttp 124 "POST /cart/ HTTP/1.1" 200 39
+INFO 2018-11-04 22:58:28,354 basehttp 124 "GET /cart/ HTTP/1.1" 200 500
+INFO 2018-11-04 22:58:30,347 basehttp 124 "GET /cart/ HTTP/1.1" 200 500
+INFO 2018-11-04 22:58:31,033 basehttp 124 "OPTIONS /cart/selection/ HTTP/1.1" 200 0
+INFO 2018-11-04 22:58:31,053 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 18
+INFO 2018-11-04 22:58:31,909 basehttp 124 "GET /cart/ HTTP/1.1" 200 502
+INFO 2018-11-04 22:58:32,822 basehttp 124 "GET /cart/ HTTP/1.1" 200 502
+INFO 2018-11-04 22:58:33,484 basehttp 124 "PUT /cart/selection/ HTTP/1.1" 200 17
+INFO 2018-11-04 22:58:34,128 basehttp 124 "GET /cart/ HTTP/1.1" 200 500
+INFO 2018-11-04 22:58:34,846 basehttp 124 "GET /cart/ HTTP/1.1" 200 500
+INFO 2018-11-05 10:54:00,015 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-05 10:54:00,212 base 152 Not Found: /categories/115/
+WARNING 2018-11-05 10:54:00,249 basehttp 124 "GET /categories/115/ HTTP/1.1" 404 8759
+INFO 2018-11-05 10:54:00,449 basehttp 124 "GET /categories/115/skus/?page=1&page_size=5&ordering=-create_time HTTP/1.1" 200 1253
+INFO 2018-11-05 10:54:00,452 basehttp 124 "GET /cart/ HTTP/1.1" 200 685
+INFO 2018-11-05 10:55:17,055 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-05 10:55:17,302 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
+INFO 2018-11-05 10:55:20,216 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-05 10:55:20,809 basehttp 124 "POST /browse_histories/ HTTP/1.1" 401 35
